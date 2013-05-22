@@ -1,7 +1,7 @@
 <Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="315" id="sv1#area5" name="LoginArea" landmark="true" defaultPage="sv1#area5#lgu1">
   <OperationUnits>
     <LoginUnit gr:x="155" gr:y="45" id="sv1#area5#lgu1" name="Login">
-      <OKLink id="sv1#area5#lgu1#oln3" name="OKLink3" to="sv1#area1#page1" automaticCoupling="true" gr:bendpoints="146,-30,-184,70"/>
+      <OKLink id="sv1#area5#lgu1#oln3" name="OKLink3" to="sv1#area1#page1#mssu2" automaticCoupling="true" gr:bendpoints="146,-30,-184,70"/>
     </LoginUnit>
     <LogoutUnit gr:x="40" gr:y="255" id="sv1#area5#lou1" name="Logout" siteView="sv1"/>
     <CreateUnit gr:x="160" gr:y="215" id="sv1#area5#cru3" name="UserCreation" entity="User">
