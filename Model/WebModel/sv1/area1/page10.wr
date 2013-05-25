@@ -1,0 +1,36 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page10" name="FriendSelection">
+  <ContentUnits>
+    <MultiChoiceIndexUnit gr:x="0" gr:y="0" id="sv1#area1#page10#mciu2" name="FriendSelection" entity="ent1" displayAttributes="ent1#att2 ent1#att4 ent1#att5 ent1#att6 ent1#att7 ent1#att8 ent1#att9 ent1#att16">
+      <PreSelector id="sv1#area1#page10#mciu2#su11" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area1#page10#mciu2#su11#rcond5" name="RoleCondition5" predicate="in" implied="false" role="rel12#role23"/>
+      </PreSelector>
+    </MultiChoiceIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page10#mciu2">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att4"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att6"/>
+          <layout:Attribute attribute="ent1#att7"/>
+          <layout:Attribute attribute="ent1#att8"/>
+          <layout:Attribute attribute="ent1#att9"/>
+          <layout:Attribute attribute="ent1#att16"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

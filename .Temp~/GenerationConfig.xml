@@ -5,13 +5,13 @@
     <Property name="ajaxActivated">true</Property>
     <Property name="applicationServer">Tomcat</Property>
     <Property name="commonsLibDir">C:\WebRatio\WebRatio Personal 7.1.0\WebRatio\plugins\com.webratio.commons.libs_7.1.0.201305120101\lib</Property>
-    <Property name="dbConfigPath">C:\Users\markus\AppData\Local\Temp\WRDBConfig7222447049907024130.xml</Property>
+    <Property name="dbConfigPath">C:\Users\markus\AppData\Local\Temp\WRDBConfig6301062040199927386.xml</Property>
     <Property name="defaultEncoding"></Property>
     <Property name="deployCorePluginDir">C:\WebRatio\WebRatio Personal 7.1.0\WebRatio\configuration\org.eclipse.osgi\bundles\49\1\.cp</Property>
     <Property name="enterpriseProjectDir"></Property>
-    <Property name="eventSocketPort">50054</Property>
+    <Property name="eventSocketPort">50049</Property>
     <Property name="excludedProjects" type="list"></Property>
-    <Property name="generationTime">201305221616</Property>
+    <Property name="generationTime">201305251904</Property>
     <Property name="helpersPluginDir">C:\WebRatio\WebRatio Personal 7.1.0\WebRatio\plugins\com.webratio.generator.helpers_7.1.0.201305120101</Property>
     <Property name="i18nBundleKeysFile" type="file"></Property>
     <Property name="i18nExtraBundleFile" type="file"></Property>
@@ -20,14 +20,14 @@
     <Property name="phases">All</Property>
     <Property name="projectDir">C:\Users\markus\SkyDrive\workspace\uni\mia</Property>
     <Property name="projectName">MIA_Project</Property>
-    <Property name="projectPath">C:\Users\markus\AppData\Local\Temp\Project9209264706008031696.wr</Property>
+    <Property name="projectPath">C:\Users\markus\AppData\Local\Temp\Project731681085690754397.wr</Property>
     <Property name="projectType">WEBPROJECT</Property>
     <Property name="rootModuleName"></Property>
     <Property name="uiPluginDir">C:\WebRatio\WebRatio Personal 7.1.0\WebRatio\plugins\com.webratio.ide.ui_7.1.0.201305120101</Property>
     <Property name="webappPluginDir">C:\WebRatio\WebRatio Personal 7.1.0\WebRatio\plugins\com.webratio.generator.webapp_7.1.0.201305120101</Property>
     <Property name="wrBuildId">201305120101</Property>
     <Property name="wrGenerateOldValidationRules">false</Property>
-    <Property name="wrModelStatistics">pages=6|units=19</Property>
+    <Property name="wrModelStatistics">pages=11|units=26</Property>
     <Property name="wrVersion">7.1.0</Property>
   </Properties>
   <Plugins>

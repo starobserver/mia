@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area2#page3" name="Registration">
   <ContentUnits>
-    <MultiEntryUnit gr:x="0" gr:y="0" id="sv1#area2#page3#meu1" name="RegForm" minLength="1" fieldOrder="sv1#area2#page3#meu1#fld1 sv1#area2#page3#meu1#fld2 sv1#area2#page3#meu1#fld3 sv1#area2#page3#meu1#fld4 sv1#area2#page3#meu1#fld5 sv1#area2#page3#meu1#fld6 sv1#area2#page3#meu1#fld7 sv1#area2#page3#meu1#sfld1 sv1#area2#page3#meu1#fld8" linkOrder="sv1#area2#page3#meu1#ln2" entity="ent1">
+    <MultiEntryUnit gr:x="0" gr:y="0" id="sv1#area2#page3#meu1" name="RegForm" minLength="1" fieldOrder="sv1#area2#page3#meu1#fld1 sv1#area2#page3#meu1#fld3 sv1#area2#page3#meu1#fld4 sv1#area2#page3#meu1#fld5 sv1#area2#page3#meu1#fld6 sv1#area2#page3#meu1#fld7 sv1#area2#page3#meu1#sfld1 sv1#area2#page3#meu1#fld8" linkOrder="sv1#area2#page3#meu1#ln2" entity="ent1">
       <SelectionField id="sv1#area2#page3#meu1#sfld1" name="Gender" type="string" modifiable="true" preselectValue="male" slotOrder="sv1#area2#page3#meu1#sfld1#slot1 sv1#area2#page3#meu1#sfld1#slot2">
         <Slot id="sv1#area2#page3#meu1#sfld1#slot2" name="female" value="female" label="true" output="true"/>
         <Slot id="sv1#area2#page3#meu1#sfld1#slot1" name="male" value="male" label="true" output="true"/>
@@ -10,7 +10,6 @@
       <Field id="sv1#area2#page3#meu1#fld5" name="Zip" type="string" modifiable="true"/>
       <Field id="sv1#area2#page3#meu1#fld4" name="Streetnumber" type="string" modifiable="true"/>
       <Field id="sv1#area2#page3#meu1#fld3" name="Streetname" type="string" modifiable="true"/>
-      <Field id="sv1#area2#page3#meu1#fld2" name="Email" type="string" modifiable="true"/>
       <Field id="sv1#area2#page3#meu1#fld1" name="Name" type="string" modifiable="true"/>
       <Link id="sv1#area2#page3#meu1#ln2" name="Link2" to="sv1#cru1" type="normal" validate="true">
         <LinkParameter id="sv1#area2#page3#meu1#ln2#par1" name="Birthdate_birthdate" source="sv1#area2#page3#meu1#fld7" target="sv1#cru1.ent1#att9"/>
@@ -33,7 +32,6 @@
         <layout:Unit unitId="sv1#area2#page3#meu1">
           <layout:Link link="sv1#area2#page3#meu1#ln2"/>
           <layout:Field field="sv1#area2#page3#meu1#fld1"/>
-          <layout:Field field="sv1#area2#page3#meu1#fld2"/>
           <layout:Field field="sv1#area2#page3#meu1#fld3"/>
           <layout:Field field="sv1#area2#page3#meu1#fld4"/>
           <layout:Field field="sv1#area2#page3#meu1#fld5"/>
