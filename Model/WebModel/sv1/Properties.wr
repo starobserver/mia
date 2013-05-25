@@ -94,5 +94,13 @@
     <GetUnit gr:x="-95" gr:y="250" id="sv1#gtu1" name="GetPerson" contextParameters="ctx3" linkOrder="sv1#gtu1#ln26">
       <Link id="sv1#gtu1#ln26" name="Link26" to="sv1#seu6" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
+    <ReconnectUnit gr:x="-20" gr:y="-165" id="sv1#rcnu2" name="FriendLinking">
+      <SourceSelector id="sv1#rcnu2#su17" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#rcnu2#su17#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv1#rcnu2#su18" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#rcnu2#su18#kcond12" name="KeyCondition12" predicate="in" implied="false"/>
+      </TargetSelector>
+    </ReconnectUnit>
   </OperationUnits>
 </SiteView>
