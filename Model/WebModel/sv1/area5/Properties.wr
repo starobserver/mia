@@ -1,13 +1,15 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="350" id="sv1#area5" name="LoginArea" landmark="true" defaultPage="sv1#area5#lgu1">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-30" gr:y="350" id="sv1#area5" name="Register" landmark="true">
   <OperationUnits>
-    <LoginUnit gr:x="170" gr:y="75" id="sv1#area5#lgu1" name="Login">
+    <LoginUnit gr:x="200" gr:y="75" id="sv1#area5#lgu1" name="Login">
       <OKLink id="sv1#area5#lgu1#oln1" name="OKLink1" to="sv1#seu2" automaticCoupling="true"/>
       <KOLink id="sv1#area5#lgu1#kln4" name="KOLink4" to="sv1#area4#page2" automaticCoupling="true"/>
     </LoginUnit>
-    <LogoutUnit gr:x="20" gr:y="0" id="sv1#area5#lou1" name="Logout" siteView="sv1"/>
-    <CreateUnit gr:x="160" gr:y="180" id="sv1#area5#cru3" name="UserCreation" entity="User">
-      <OKLink id="sv1#area5#cru3#oln4" name="OKLink4" to="sv1#area5#page8" automaticCoupling="true"/>
-      <KOLink id="sv1#area5#cru3#kln3" name="KOLink3" to="sv1#area4#page6" automaticCoupling="true"/>
+    <LogoutUnit gr:x="50" gr:y="0" id="sv1#area5#lou1" name="Logout" siteView="sv1"/>
+    <CreateUnit gr:x="190" gr:y="180" id="sv1#area5#cru3" name="UserCreation" entity="User">
+      <OKLink id="sv1#area5#cru3#oln4" name="OKLink4" to="sv1#lgu2">
+        <LinkParameter id="sv1#area5#cru3#oln4#par25" name="userName_Username" source="userNameArray" target="sv1#lgu2.username"/>
+        <LinkParameter id="sv1#area5#cru3#oln4#par30" name="password_Password" source="passwordArray" target="sv1#lgu2.password"/>
+      </OKLink>
     </CreateUnit>
   </OperationUnits>
 </Area>

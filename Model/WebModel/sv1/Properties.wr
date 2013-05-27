@@ -4,7 +4,6 @@
       <KOLink id="sv1#cru1#kln1" name="KOLink1" to="sv1#area4#page6" automaticCoupling="true"/>
       <OKLink id="sv1#cru1#oln5" name="OKLink5" to="sv1#cnu4">
         <LinkParameter id="sv1#cru1#oln5#par17" name="oid_KeyCondition8 [oid] [Person] [Source]" source="ent1#att1Array" target="sv1#cnu4#su7#kcond8.ent1#att1"/>
-        <LinkParameter id="sv1#cru1#oln5#par18" name="Key [oid]_PASSING" sourceLinkParameter="sv1#area2#page3#meu1#ln2#par10" passing="true"/>
       </OKLink>
       <Link id="sv1#cru1#ln15" name="Link15" to="sv1#stu4" automaticCoupling="true" type="transport" validate="true"/>
     </CreateUnit>
@@ -102,5 +101,8 @@
         <KeyCondition id="sv1#rcnu2#su18#kcond12" name="KeyCondition12" predicate="in" implied="false"/>
       </TargetSelector>
     </ReconnectUnit>
+    <LoginUnit gr:x="160" gr:y="710" id="sv1#lgu2" name="LoginAfterReg">
+      <OKLink id="sv1#lgu2#oln13" name="OKLink13" to="sv1#area2#page3" automaticCoupling="true"/>
+    </LoginUnit>
   </OperationUnits>
 </SiteView>

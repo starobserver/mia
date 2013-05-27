@@ -1,44 +1,56 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area2#page3" name="Registration">
   <ContentUnits>
-    <MultiEntryUnit gr:x="0" gr:y="0" id="sv1#area2#page3#meu1" name="RegForm" minLength="1" fieldOrder="sv1#area2#page3#meu1#fld1 sv1#area2#page3#meu1#fld3 sv1#area2#page3#meu1#fld4 sv1#area2#page3#meu1#fld5 sv1#area2#page3#meu1#fld6 sv1#area2#page3#meu1#fld7 sv1#area2#page3#meu1#sfld1 sv1#area2#page3#meu1#fld8" linkOrder="sv1#area2#page3#meu1#ln2" entity="ent1">
-      <SelectionField id="sv1#area2#page3#meu1#sfld1" name="Gender" type="string" modifiable="true" preselectValue="male" slotOrder="sv1#area2#page3#meu1#sfld1#slot1 sv1#area2#page3#meu1#sfld1#slot2">
-        <Slot id="sv1#area2#page3#meu1#sfld1#slot2" name="female" value="female" label="true" output="true"/>
-        <Slot id="sv1#area2#page3#meu1#sfld1#slot1" name="male" value="male" label="true" output="true"/>
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#area2#page3#enu4" name="RegFormPerson" fieldOrder="sv1#area2#page3#enu4#fld19 sv1#area2#page3#enu4#fld20 sv1#area2#page3#enu4#fld21 sv1#area2#page3#enu4#fld22 sv1#area2#page3#enu4#fld23 sv1#area2#page3#enu4#fld24 sv1#area2#page3#enu4#fld26 sv1#area2#page3#enu4#sfld2" linkOrder="sv1#area2#page3#enu4#ln9">
+      <SelectionField id="sv1#area2#page3#enu4#sfld2" name="gender" type="string" modifiable="true">
+        <Slot id="sv1#area2#page3#enu4#sfld2#slot3" name="female" label="true" output="true"/>
+        <Slot id="sv1#area2#page3#enu4#sfld2#slot4" name="male" label="true" output="true"/>
       </SelectionField>
-      <Field id="sv1#area2#page3#meu1#fld7" name="Birthdate" type="date" modifiable="true"/>
-      <Field id="sv1#area2#page3#meu1#fld6" name="City" type="string" modifiable="true"/>
-      <Field id="sv1#area2#page3#meu1#fld5" name="Zip" type="string" modifiable="true"/>
-      <Field id="sv1#area2#page3#meu1#fld4" name="Streetnumber" type="string" modifiable="true"/>
-      <Field id="sv1#area2#page3#meu1#fld3" name="Streetname" type="string" modifiable="true"/>
-      <Field id="sv1#area2#page3#meu1#fld1" name="Name" type="string" modifiable="true"/>
-      <Link id="sv1#area2#page3#meu1#ln2" name="Link2" to="sv1#cru1" type="normal" validate="true">
-        <LinkParameter id="sv1#area2#page3#meu1#ln2#par1" name="Birthdate_birthdate" source="sv1#area2#page3#meu1#fld7" target="sv1#cru1.ent1#att9"/>
-        <LinkParameter id="sv1#area2#page3#meu1#ln2#par2" name="City_city" source="sv1#area2#page3#meu1#fld6" target="sv1#cru1.ent1#att6"/>
-        <LinkParameter id="sv1#area2#page3#meu1#ln2#par3" name="Gender_gender" source="sv1#area2#page3#meu1#sfld1" target="sv1#cru1.ent1#att16"/>
-        <LinkParameter id="sv1#area2#page3#meu1#ln2#par4" name="Email_mail" source="sv1#area2#page3#meu1#fld2" target="sv1#cru1.ent1#att3"/>
-        <LinkParameter id="sv1#area2#page3#meu1#ln2#par5" name="Name_name" source="sv1#area2#page3#meu1#fld1" target="sv1#cru1.ent1#att2"/>
-        <LinkParameter id="sv1#area2#page3#meu1#ln2#par6" name="Streetname_street" source="sv1#area2#page3#meu1#fld3" target="sv1#cru1.ent1#att4"/>
-        <LinkParameter id="sv1#area2#page3#meu1#ln2#par7" name="Streetnumber_streetnr" source="sv1#area2#page3#meu1#fld4" target="sv1#cru1.ent1#att5"/>
-        <LinkParameter id="sv1#area2#page3#meu1#ln2#par8" name="Zip_zip" source="sv1#area2#page3#meu1#fld5" target="sv1#cru1.ent1#att7"/>
-        <LinkParameter id="sv1#area2#page3#meu1#ln2#par9" name="Phone number_tel" source="sv1#area2#page3#meu1#fld8" target="sv1#cru1.ent1#att8"/>
-        <LinkParameter id="sv1#area2#page3#meu1#ln2#par10" name="Key [oid]_PASSING" source="ent1#att1Key" passing="true"/>
+      <Field id="sv1#area2#page3#enu4#fld26" name="PhoneNumber" type="string" modifiable="true"/>
+      <Field id="sv1#area2#page3#enu4#fld24" name="Birthdate" type="string" modifiable="true"/>
+      <Field id="sv1#area2#page3#enu4#fld23" name="City" type="string" modifiable="true"/>
+      <Field id="sv1#area2#page3#enu4#fld22" name="Zip" type="string" modifiable="true"/>
+      <Field id="sv1#area2#page3#enu4#fld21" name="Streetnumber" type="string" modifiable="true"/>
+      <Field id="sv1#area2#page3#enu4#fld20" name="Streetname" type="string" modifiable="true"/>
+      <Field id="sv1#area2#page3#enu4#fld19" name="Name" type="string" modifiable="true"/>
+      <Link id="sv1#area2#page3#enu4#ln9" name="Link2" to="sv1#cru1" type="normal" validate="true">
+        <LinkParameter id="sv1#area2#page3#enu4#ln9#par36" name="Birthdate_birthdate" source="sv1#area2#page3#enu4#fld24" target="sv1#cru1.ent1#att9"/>
+        <LinkParameter id="sv1#area2#page3#enu4#ln9#par37" name="City_city" source="sv1#area2#page3#enu4#fld23" target="sv1#cru1.ent1#att6"/>
+        <LinkParameter id="sv1#area2#page3#enu4#ln9#par38" name="Gender_gender" source="sv1#area2#page3#enu4#sfld2" target="sv1#cru1.ent1#att16"/>
+        <LinkParameter id="sv1#area2#page3#enu4#ln9#par40" name="Name_name" source="sv1#area2#page3#enu4#fld19" target="sv1#cru1.ent1#att2"/>
+        <LinkParameter id="sv1#area2#page3#enu4#ln9#par41" name="Streetname_street" source="sv1#area2#page3#enu4#fld20" target="sv1#cru1.ent1#att4"/>
+        <LinkParameter id="sv1#area2#page3#enu4#ln9#par42" name="Streetnumber_streetnr" source="sv1#area2#page3#enu4#fld21" target="sv1#cru1.ent1#att5"/>
+        <LinkParameter id="sv1#area2#page3#enu4#ln9#par43" name="Zip_zip" source="sv1#area2#page3#enu4#fld22" target="sv1#cru1.ent1#att7"/>
+        <LinkParameter id="sv1#area2#page3#enu4#ln9#par44" name="Phone number_tel" source="sv1#area2#page3#enu4#fld26" target="sv1#cru1.ent1#att8"/>
       </Link>
-      <Field id="sv1#area2#page3#meu1#fld8" name="Phone number" type="string" modifiable="true"/>
-    </MultiEntryUnit>
+    </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#area2#page3#meu1">
-          <layout:Link link="sv1#area2#page3#meu1#ln2"/>
-          <layout:Field field="sv1#area2#page3#meu1#fld1"/>
-          <layout:Field field="sv1#area2#page3#meu1#fld3"/>
-          <layout:Field field="sv1#area2#page3#meu1#fld4"/>
-          <layout:Field field="sv1#area2#page3#meu1#fld5"/>
-          <layout:Field field="sv1#area2#page3#meu1#fld6"/>
-          <layout:Field field="sv1#area2#page3#meu1#fld7"/>
-          <layout:Field field="sv1#area2#page3#meu1#sfld1"/>
-          <layout:Field field="sv1#area2#page3#meu1#fld8"/>
+        <layout:Unit unitId="sv1#area2#page3#enu4">
+          <layout:Field field="sv1#area2#page3#enu4#fld19"/>
+          <layout:Field field="sv1#area2#page3#enu4#fld20"/>
+          <layout:Field field="sv1#area2#page3#enu4#fld21"/>
+          <layout:Field field="sv1#area2#page3#enu4#fld22"/>
+          <layout:Field field="sv1#area2#page3#enu4#fld23"/>
+          <layout:Field field="sv1#area2#page3#enu4#fld24"/>
+          <layout:Field field="sv1#area2#page3#enu4#fld26"/>
+          <layout:Field field="sv1#area2#page3#enu4#sfld2"/>
+          <layout:Link link="sv1#area2#page3#enu4#ln9"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
