@@ -12,7 +12,7 @@
       <Field id="sv1#area5#page8#enu3#fld18" name="email" type="string" modifiable="true"/>
       <Field id="sv1#area5#page8#enu3#fld17" name="password" type="password" modifiable="true"/>
       <Field id="sv1#area5#page8#enu3#fld16" name="username" type="string" modifiable="true"/>
-      <Link id="sv1#area5#page8#enu3#ln8" name="Link8" to="sv1#area5#cru3" type="normal" validate="true">
+      <Link id="sv1#area5#page8#enu3#ln8" name="Register" to="sv1#area5#cru3" type="normal" validate="true">
         <LinkParameter id="sv1#area5#page8#enu3#ln8#par33" name="email_email" source="sv1#area5#page8#enu3#fld18" target="sv1#area5#cru3.email"/>
         <LinkParameter id="sv1#area5#page8#enu3#ln8#par34" name="password_password" source="sv1#area5#page8#enu3#fld17" target="sv1#area5#cru3.password"/>
         <LinkParameter id="sv1#area5#page8#enu3#ln8#par35" name="username_userName" source="sv1#area5#page8#enu3#fld16" target="sv1#area5#cru3.userName"/>

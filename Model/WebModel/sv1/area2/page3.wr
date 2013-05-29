@@ -12,7 +12,7 @@
       <Field id="sv1#area2#page3#enu4#fld21" name="Streetnumber" type="string" modifiable="true"/>
       <Field id="sv1#area2#page3#enu4#fld20" name="Streetname" type="string" modifiable="true"/>
       <Field id="sv1#area2#page3#enu4#fld19" name="Name" type="string" modifiable="true"/>
-      <Link id="sv1#area2#page3#enu4#ln9" name="Link2" to="sv1#cru1" type="normal" validate="true">
+      <Link id="sv1#area2#page3#enu4#ln9" name="Continue" to="sv1#cru1" type="normal" validate="true">
         <LinkParameter id="sv1#area2#page3#enu4#ln9#par36" name="Birthdate_birthdate" source="sv1#area2#page3#enu4#fld24" target="sv1#cru1.ent1#att9"/>
         <LinkParameter id="sv1#area2#page3#enu4#ln9#par37" name="City_city" source="sv1#area2#page3#enu4#fld23" target="sv1#cru1.ent1#att6"/>
         <LinkParameter id="sv1#area2#page3#enu4#ln9#par38" name="Gender_gender" source="sv1#area2#page3#enu4#sfld2" target="sv1#cru1.ent1#att16"/>

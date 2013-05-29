@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Main" landmarks="sv1#area1 sv1#area5" homePage="sv1#area1#page1">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Main" landmarks="sv1#area1" homePage="sv1#area1#page1">
   <OperationUnits>
     <CreateUnit gr:x="655" gr:y="270" id="sv1#cru1" name="PersonCreateUnit" entity="ent1" linkOrder="sv1#cru1#ln15">
       <KOLink id="sv1#cru1#kln1" name="KOLink1" to="sv1#area4#page6" automaticCoupling="true"/>
@@ -11,16 +11,6 @@
       <OKLink id="sv1#cru2#oln2" name="OKLink2" to="sv1#area1#page4" automaticCoupling="true"/>
       <KOLink id="sv1#cru2#kln2" name="KOLink2" to="sv1#area4#page7" automaticCoupling="true"/>
     </CreateUnit>
-    <ConnectUnit gr:x="420" gr:y="685" id="sv1#cnu2" name="AddInterestToPerson" relationship="rel6#role12">
-      <SourceSelector id="sv1#cnu2#su3" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv1#cnu2#su3#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
-      </SourceSelector>
-      <TargetSelector id="sv1#cnu2#su4" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv1#cnu2#su4#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
-      </TargetSelector>
-      <OKLink id="sv1#cnu2#oln8" name="OKLink8" to="sv1#area1#page4" automaticCoupling="true"/>
-      <KOLink id="sv1#cnu2#kln6" name="KOLink6" to="sv1#area4#page9" automaticCoupling="true"/>
-    </ConnectUnit>
     <GetUnit gr:x="465" gr:y="505" id="sv1#gtu3" name="GetUser" contextParameters="UserCtxParam" linkOrder="sv1#gtu3#ln13">
       <Link id="sv1#gtu3#ln14" name="Link14" to="sv1#cnu4" type="transport" validate="true">
         <LinkParameter id="sv1#gtu3#ln14#par19" name="UserCtxParam.oid_KeyCondition9 [oid] [User] [Target]" source="sv1#gtu3.UserCtxParam" target="sv1#cnu4#su8#kcond9.userOID"/>
@@ -48,13 +38,11 @@
       <TargetSelector id="sv1#cnu5#su10" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#cnu5#su10#kcond11" name="KeyCondition11" predicate="in" implied="false"/>
       </TargetSelector>
-      <OKLink id="sv1#cnu5#oln7" name="OKLink7" to="sv1#cru4">
-        <LinkParameter id="sv1#cnu5#oln7#par29" name="Target oid [Person]_Person.oid(FriendsToPerson)" source="targetent1#att1" target="sv1#cru4.rel11#role22.ent1#att1"/>
-      </OKLink>
+      <OKLink id="sv1#cnu5#oln7" name="OKLink7" to="sv1#area1#page4"/>
     </ConnectUnit>
     <SetUnit gr:x="495" gr:y="285" id="sv1#stu4" name="SetPerson" contextParameters="ctx3"/>
     <GetUnit gr:x="600" gr:y="560" id="sv1#gtu4" name="GetPerson" contextParameters="ctx3">
-      <Link id="sv1#gtu4#ln17" name="Link17" to="sv1#cnu2" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv1#gtu4#ln17" name="Link17" to="sv1#rcnu1" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv1#gtu4#ln22" name="Link22" to="sv1#seu3" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
     <SelectorUnit gr:x="310" gr:y="585" id="sv1#seu2" name="GetPerson" entity="ent1">
@@ -74,35 +62,46 @@
         <LinkParameter id="sv1#seu3#oln9#par24" name="oid_RoleCondition3 [oid]" source="ent4#att14Array" target="sv1#area1#page4#mciu1#su5#rcond3.ent1#att1"/>
       </OKLink>
     </SelectorUnit>
-    <CreateUnit gr:x="530" gr:y="810" id="sv1#cru4" name="FriendsObjectCreateUnit" entity="ent9">
-      <OKLink id="sv1#cru4#oln10" name="OKLink10" to="sv1#area1#page4" automaticCoupling="true"/>
-      <KOLink id="sv1#cru4#kln8" name="KOLink8" to="sv1#area4#page11" automaticCoupling="true"/>
-    </CreateUnit>
-    <SelectorUnit gr:x="25" gr:y="-45" id="sv1#seu5" name="GetFriendObject" entity="ent9">
-      <Selector id="sv1#seu5#su13" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv1#seu5#su13#rcond6" name="RoleCondition6" predicate="in" implied="false" role="rel11#role21"/>
-      </Selector>
-      <OKLink id="sv1#seu5#oln12" name="OKLink12" to="sv1#area1#page10#mciu2"/>
-    </SelectorUnit>
-    <SelectorUnit gr:x="80" gr:y="220" id="sv1#seu6" name="GetPerson" entity="ent1">
+    <SelectorUnit gr:x="70" gr:y="110" id="sv1#seu6" name="GetPerson" entity="ent1">
       <Selector id="sv1#seu6#su12" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv1#seu6#su12#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
+        <RelationshipRoleCondition id="sv1#seu6#su12#rcond7" name="RoleCondition7" predicate="in" implied="false" role="rel1#role1"/>
       </Selector>
-      <OKLink id="sv1#seu6#oln11" name="OKLink11" to="sv1#seu5" automaticCoupling="true"/>
+      <OKLink id="sv1#seu6#oln11" name="OKLink11" to="sv1#area1#page10#mciu2" automaticCoupling="true"/>
     </SelectorUnit>
-    <GetUnit gr:x="-95" gr:y="250" id="sv1#gtu1" name="GetPerson" contextParameters="ctx3" linkOrder="sv1#gtu1#ln26">
-      <Link id="sv1#gtu1#ln26" name="Link26" to="sv1#seu6" automaticCoupling="true" type="transport" validate="true"/>
+    <GetUnit gr:x="-95" gr:y="250" id="sv1#gtu1" name="GetPerson" contextParameters="ctx3" linkOrder="sv1#gtu1#ln26 sv1#gtu1#ln10">
+      <Link id="sv1#gtu1#ln26" name="Link26" to="sv1#seu6" type="transport" validate="true">
+        <LinkParameter id="sv1#gtu1#ln26#par8" name="PersonCtxParam.oid_KeyCondition2 [oid]" source="sv1#gtu1.ctx3.ent1#att1" target="sv1#seu6#su12#kcond2.ent1#att1"/>
+        <LinkParameter id="sv1#gtu1#ln26#par9" name="PersonCtxParam.oid_RoleCondition7 [oid]" source="sv1#gtu1.ctx3.ent1#att1" target="sv1#seu6#su12#rcond7.ent1#att1"/>
+      </Link>
+      <Link id="sv1#gtu1#ln10" name="Link10" to="sv1#rcnu2" type="transport" validate="true">
+        <LinkParameter id="sv1#gtu1#ln10#par6" name="PersonCtxParam.oid_KeyCondition12 [oid] [Person] [ConnectTarget]" source="sv1#gtu1.ctx3.ent1#att1" target="sv1#rcnu2#su18#kcond12.ent1#att1"/>
+      </Link>
     </GetUnit>
-    <ReconnectUnit gr:x="-20" gr:y="-165" id="sv1#rcnu2" name="FriendLinking">
+    <ReconnectUnit gr:x="-20" gr:y="-165" id="sv1#rcnu2" name="FriendLinking" relationship="rel1#role2">
       <SourceSelector id="sv1#rcnu2#su17" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#rcnu2#su17#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
       </SourceSelector>
       <TargetSelector id="sv1#rcnu2#su18" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#rcnu2#su18#kcond12" name="KeyCondition12" predicate="in" implied="false"/>
       </TargetSelector>
+      <OKLink id="sv1#rcnu2#oln8" name="OKLink8" to="sv1#seu6" automaticCoupling="true"/>
+      <KOLink id="sv1#rcnu2#kln6" name="KOLink6" to="sv1#area4#page9" automaticCoupling="true"/>
     </ReconnectUnit>
     <LoginUnit gr:x="160" gr:y="710" id="sv1#lgu2" name="LoginAfterReg">
       <OKLink id="sv1#lgu2#oln13" name="OKLink13" to="sv1#area2#page3" automaticCoupling="true"/>
     </LoginUnit>
+    <ReconnectUnit gr:x="360" gr:y="690" id="sv1#rcnu1" name="InterestPerson" relationship="rel6#role12">
+      <SourceSelector id="sv1#rcnu1#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#rcnu1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv1#rcnu1#su14" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#rcnu1#su14#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </TargetSelector>
+      <DisconnectTargetSelector id="sv1#rcnu1#su15" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#rcnu1#su15#rcond1" name="RoleCondition1" predicate="in" implied="false" role="rel6#role12"/>
+      </DisconnectTargetSelector>
+      <OKLink id="sv1#rcnu1#oln14" name="OKLink8" to="sv1#area1#page4" automaticCoupling="true"/>
+      <KOLink id="sv1#rcnu1#kln3" name="KOLink6" to="sv1#area4#page9" automaticCoupling="true"/>
+    </ReconnectUnit>
   </OperationUnits>
 </SiteView>

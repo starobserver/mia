@@ -1,10 +1,12 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page10" name="FriendSelection">
   <ContentUnits>
-    <MultiChoiceIndexUnit gr:x="0" gr:y="0" id="sv1#area1#page10#mciu2" name="FriendSelection" entity="ent1" displayAttributes="ent1#att2 ent1#att4 ent1#att5 ent1#att6 ent1#att7 ent1#att8 ent1#att9 ent1#att16" linkOrder="sv1#area1#page10#mciu2#ln27">
+    <MultiChoiceIndexUnit gr:x="0" gr:y="0" id="sv1#area1#page10#mciu2" name="FriendSelection" entity="ent1" displayAttributes="ent1#att2 ent1#att4 ent1#att5 ent1#att6 ent1#att7 ent1#att8 ent1#att9 ent1#att16" linkOrder="sv1#area1#page10#mciu2#ln2">
       <PreSelector id="sv1#area1#page10#mciu2#su11" booleanOperator="and">
-        <RelationshipRoleCondition id="sv1#area1#page10#mciu2#su11#rcond5" name="RoleCondition5" predicate="in" implied="false" role="rel12#role23"/>
+        <KeyCondition id="sv1#area1#page10#mciu2#su11#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
       </PreSelector>
-      <Link id="sv1#area1#page10#mciu2#ln27" name="Link27" to="sv1#rcnu2" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#area1#page10#mciu2#ln2" name="Save my friends" to="sv1#rcnu2" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page10#mciu2#ln2#par5" name="Checked oid_KeyCondition7 [oid] [Person] [ConnectSource]" source="ent1#att1Checked" target="sv1#rcnu2#su17#kcond7.ent1#att1"/>
+      </Link>
     </MultiChoiceIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -19,7 +21,7 @@
           <layout:Attribute attribute="ent1#att8"/>
           <layout:Attribute attribute="ent1#att9"/>
           <layout:Attribute attribute="ent1#att16"/>
-          <layout:Link link="sv1#area1#page10#mciu2#ln27"/>
+          <layout:Link link="sv1#area1#page10#mciu2#ln2"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

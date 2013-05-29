@@ -109,25 +109,6 @@
       <db:JoinColumn attribute="ent4#att14" name="interest_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="620" gr:y="260" id="ent9" name="Friends" duration="persistent" db:database="db2" db:table="friends">
-    <Attribute id="ent9#att28" key="true" name="oid" type="integer" db:column="oid"/>
-  </Entity>
-  <Relationship id="rel11" name="Person_Friends" sourceEntity="ent1" targetEntity="ent9" db:database="db2" db:table="friends">
-    <RelationshipRole1 id="rel11#role21" name="PersonToFriends" maxCard="1">
-      <db:JoinColumn attribute="ent1#att1" name="person_oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel11#role22" name="FriendsToPerson" maxCard="1">
-      <db:JoinColumn attribute="ent9#att28" name="oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel12" name="Friends_Person" sourceEntity="ent9" targetEntity="ent1" gr:bendpoints="-161,-27,144,-82" db:database="db2" db:table="friends_person">
-    <RelationshipRole1 id="rel12#role23" name="FriendsToPerson_2" maxCard="N">
-      <db:JoinColumn attribute="ent9#att28" name="friends_oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel12#role24" name="PersonToFriends_2" maxCard="N">
-      <db:JoinColumn attribute="ent1#att1" name="person_oid"/>
-    </RelationshipRole2>
-  </Relationship>
   <Relationship id="rel13" name="User_Person" sourceEntity="User" targetEntity="ent1" db:database="db2" db:table="person">
     <RelationshipRole1 id="rel13#role25" name="UserToPerson" maxCard="1">
       <db:JoinColumn attribute="userOID" name="user_oid"/>
@@ -137,4 +118,12 @@
     </RelationshipRole2>
   </Relationship>
   <db:Database id="db2" name="MIA" type="MySQL" url="jdbc:mysql://marce.at:3306/MIA" username="miadbuser" cryptedPassword="true" password="bWlhZGJwYXNz"/>
+  <Relationship id="rel1" name="Friends" sourceEntity="ent1" targetEntity="ent1" gr:bendpoints="103,38,103,38;103,-38,103,-38" db:database="db2" db:table="friends_2">
+    <RelationshipRole1 id="rel1#role1" name="PersonToPerson1" maxCard="N">
+      <db:JoinColumn attribute="ent1#att1" name="person_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel1#role2" name="PersonToPerson2" maxCard="N">
+      <db:JoinColumn attribute="ent1#att1" name="person_oid_2"/>
+    </RelationshipRole2>
+  </Relationship>
 </DataModel>
