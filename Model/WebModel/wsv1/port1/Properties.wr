@@ -1,0 +1,27 @@
+<Port xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="335" gr:y="270" id="wsv1#port1" name="Chat">
+  <OperationUnits>
+    <SolicitUnit id="wsv1#port1#slu1" name="GetChatProtocol" invocationStyle="REST" gr:x="0" gr:y="10">
+      <SolicitParameter id="wsv1#port1#slu1#slp1" name="userid1" xsdType="{http://www.w3.org/2001/XMLSchema}integer[SimpleType]"/>
+      <SolicitParameter id="wsv1#port1#slu1#slp2" name="userid2" xsdType="{http://www.w3.org/2001/XMLSchema}integer[SimpleType]"/>
+      <OKLink id="wsv1#port1#slu1#oln24" name="OKLink24" to="wsv1#port1#seu1"/>
+      <KOLink id="wsv1#port1#slu1#kln12" name="KOLink12" to="wsv1#port1#eru1" automaticCoupling="true"/>
+    </SolicitUnit>
+    <XMLOutUnit gr:x="480" gr:y="20" id="wsv1#port1#xou1" name="GetProtocol" oldDocStyle="false">
+      <XMLOutEntity id="wsv1#port1#xou1#xoe1" name="ChatProtocol" useNames="false" entity="ent3" exportedAttributes="ent3#att12 rel8#role15.ent1#att2 ent3#att13"/>
+      <OKLink id="wsv1#port1#xou1#oln26" name="OKLink26" to="wsv1#port1#rsu1" automaticCoupling="true"/>
+      <KOLink id="wsv1#port1#xou1#kln14" name="KOLink14" to="wsv1#port1#eru1" automaticCoupling="true"/>
+    </XMLOutUnit>
+    <ErrorResponseUnit gr:x="285" gr:y="150" id="wsv1#port1#eru1" name="GetChatProtocolError"/>
+    <ResponseUnit gr:x="665" gr:y="20" id="wsv1#port1#rsu1" name="SendChatProtocol">
+      <KOLink id="wsv1#port1#rsu1#kln15" name="KOLink15" to="wsv1#port1#eru1" automaticCoupling="true"/>
+    </ResponseUnit>
+    <SelectorUnit gr:x="255" gr:y="0" id="wsv1#port1#seu1" name="GetChat" entity="ent2">
+      <Selector id="wsv1#port1#seu1#su29" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="wsv1#port1#seu1#su29#rcond11" name="RoleCondition11" predicate="in" implied="false" role="rel10#role20"/>
+        <RelationshipRoleCondition id="wsv1#port1#seu1#su29#rcond12" name="RoleCondition12" predicate="in" implied="false" role="rel9#role18"/>
+      </Selector>
+      <KOLink id="wsv1#port1#seu1#kln13" name="KOLink13" to="wsv1#port1#eru1" automaticCoupling="true"/>
+      <OKLink id="wsv1#port1#seu1#oln27" name="OKLink27" to="wsv1#port1#xou1" automaticCoupling="true"/>
+    </SelectorUnit>
+  </OperationUnits>
+</Port>

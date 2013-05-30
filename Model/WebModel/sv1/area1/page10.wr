@@ -6,6 +6,7 @@
       </PreSelector>
       <Link id="sv1#area1#page10#mciu2#ln2" name="Save my friends" to="sv1#cnu3" type="normal" validate="true">
         <LinkParameter id="sv1#area1#page10#mciu2#ln2#par21" name="Checked oid_KeyCondition17 [oid] [Person] [Target]" source="ent1#att1Checked" target="sv1#cnu3#su25#kcond17.ent1#att1"/>
+        <LinkParameter id="sv1#area1#page10#mciu2#ln2#par58" name="Checked oid_PASSING" source="ent1#att1Checked" passing="true"/>
       </Link>
     </MultiChoiceIndexUnit>
   </ContentUnits>
