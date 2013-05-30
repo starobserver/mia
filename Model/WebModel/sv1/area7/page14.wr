@@ -1,16 +1,28 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="145" id="sv1#area7#page14" name="Chat">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="155" id="sv1#area7#page14" name="Chat">
   <ContentUnits>
-    <IndexUnit gr:x="0" gr:y="0" id="sv1#area7#page14#inu2" name="ChatLog" entity="ent3" displayAttributes="ent3#att12 rel8#role15.ent1#att2 ent3#att13">
+    <IndexUnit gr:x="140" gr:y="25" id="sv1#area7#page14#inu2" name="ChatLog" entity="ent3" displayAttributes="ent3#att12 rel8#role15.ent1#att2 ent3#att13">
       <Selector id="sv1#area7#page14#inu2#su13" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area7#page14#inu2#su13#rcond9" name="RoleCondition9" predicate="in" implied="false" role="rel7#role13"/>
       </Selector>
     </IndexUnit>
-    <EntryUnit gr:x="15" gr:y="105" id="sv1#area7#page14#enu5" name="Add Message" fieldOrder="sv1#area7#page14#enu5#fld1" linkOrder="sv1#area7#page14#enu5#ln28">
+    <EntryUnit gr:x="155" gr:y="130" id="sv1#area7#page14#enu5" name="Add Message" fieldOrder="sv1#area7#page14#enu5#fld1" linkOrder="sv1#area7#page14#enu5#ln28">
       <Field id="sv1#area7#page14#enu5#fld1" name="Message" type="string" modifiable="true"/>
       <Link id="sv1#area7#page14#enu5#ln28" name="Add Msg" to="sv1#cru5" type="normal" validate="true">
         <LinkParameter id="sv1#area7#page14#enu5#ln28#par15" name="Message_text" source="sv1#area7#page14#enu5#fld1" target="sv1#cru5.ent3#att13"/>
       </Link>
     </EntryUnit>
+    <IndexUnit gr:x="10" gr:y="140" id="sv1#area7#page14#inu4" name="SharedInterests" entity="ent4" displayAttributes="ent4#att15">
+      <Selector id="sv1#area7#page14#inu4#su17" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area7#page14#inu4#su17#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+    </IndexUnit>
+    <SelectorUnit gr:x="0" gr:y="0" id="sv1#area7#page14#seu13" name="GetSharedInterests" entity="ent4">
+      <Selector id="sv1#area7#page14#seu13#su16" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area7#page14#seu13#su16#rcond8" name="RoleCondition8" role="rel6#role11" predicate="in" implied="false"/>
+        <RelationshipRoleCondition id="sv1#area7#page14#seu13#su16#rcond21" name="RoleCondition21" role="rel6#role11" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#area7#page14#seu13#ln52" name="Link52" to="sv1#area7#page14#inu4" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -35,11 +47,57 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area7#page14#inu4">
+          <layout:Attribute attribute="ent4#att15"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area7#page14#enu5">
           <layout:Field field="sv1#area7#page14#enu5#fld1"/>
           <layout:Link link="sv1#area7#page14#enu5#ln28"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

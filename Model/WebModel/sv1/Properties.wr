@@ -68,7 +68,7 @@
       </Selector>
       <OKLink id="sv1#seu6#oln11" name="OKLink11" to="sv1#area1#page10#mciu2" automaticCoupling="true"/>
     </SelectorUnit>
-    <GetUnit gr:x="-55" gr:y="0" id="sv1#gtu1" name="GetPerson" contextParameters="ctx3" linkOrder="sv1#gtu1#ln26 sv1#gtu1#ln10 sv1#gtu1#ln23 sv1#gtu1#ln29 sv1#gtu1#ln31 sv1#gtu1#ln30 sv1#gtu1#ln34 sv1#gtu1#ln36">
+    <GetUnit gr:x="-55" gr:y="0" id="sv1#gtu1" name="GetPerson" contextParameters="ctx3" linkOrder="sv1#gtu1#ln26 sv1#gtu1#ln10 sv1#gtu1#ln23 sv1#gtu1#ln29 sv1#gtu1#ln31 sv1#gtu1#ln30 sv1#gtu1#ln34 sv1#gtu1#ln36 sv1#gtu1#ln51">
       <Link id="sv1#gtu1#ln26" name="Link26" to="sv1#seu6" type="transport" validate="true">
         <LinkParameter id="sv1#gtu1#ln26#par8" name="PersonCtxParam.oid_KeyCondition2 [oid]" source="sv1#gtu1.ctx3.ent1#att1" target="sv1#seu6#su12#kcond2.ent1#att1"/>
         <LinkParameter id="sv1#gtu1#ln26#par9" name="PersonCtxParam.oid_RoleCondition7 [oid]" source="sv1#gtu1.ctx3.ent1#att1" target="sv1#seu6#su12#rcond7.ent1#att1"/>
@@ -97,6 +97,9 @@
         <LinkParameter id="sv1#gtu1#ln38#par99" name="PersonCtxParam.oid_PASSING" source="sv1#gtu1.ctx3.ent1#att1" passing="true"/>
         <LinkParameter id="sv1#gtu1#ln38#par103" name="PersonCtxParam.oid_RoleCondition10 [oid]" source="sv1#gtu1.ctx3.ent1#att1" target="sv1#seu10#su32#rcond18.ent1#att1"/>
       </Link>
+      <Link id="sv1#gtu1#ln51" name="Link51" to="sv1#area7#page14#seu13" type="transport" validate="true">
+        <LinkParameter id="sv1#gtu1#ln51#par136" name="PersonCtxParam.oid_RoleCondition21 [oid]" source="sv1#gtu1.ctx3.ent1#att1" target="sv1#area7#page14#seu13#su16#rcond21.ent1#att1"/>
+      </Link>
     </GetUnit>
     <LoginUnit gr:x="160" gr:y="710" id="sv1#lgu2" name="LoginAfterReg">
       <OKLink id="sv1#lgu2#oln13" name="OKLink13" to="sv1#area2#page3" automaticCoupling="true"/>
@@ -107,13 +110,14 @@
       </Selector>
       <OKLink id="sv1#seu4#oln21" name="OKLink21" to="sv1#area7#page13#inu3" automaticCoupling="true"/>
     </SelectorUnit>
-    <CreateUnit gr:x="-190" gr:y="235" id="sv1#cru4" name="CreateChat" entity="ent2" linkOrder="sv1#cru4#ln24">
-      <OKLink id="sv1#cru4#oln15" name="OKLink15" to="sv1#area7#page14#inu2">
-        <LinkParameter id="sv1#cru4#oln15#par14" name="oid_RoleCondition9 [oid]" source="ent2#att10Array" target="sv1#area7#page14#inu2#su13#rcond9.ent2#att10"/>
+    <CreateUnit gr:x="-190" gr:y="235" id="sv1#cru4" name="CreateChat" entity="ent2">
+      <OKLink id="sv1#cru4#oln15" name="OKLink15" to="sv1#area7#page14">
+        <LinkParameter id="sv1#cru4#oln15#par127" name="oid_PASSING" sourceLinkParameter="sv1#seu5#kln8#par126" passing="true"/>
       </OKLink>
       <Link id="sv1#cru4#ln24" name="Link24" to="sv1#stu1" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv1#cru4#ln55" name="Link55" to="sv1#area7#page14#inu2" automaticCoupling="true" type="transport" validate="true" gr:bendpoints="-125,-52,130,88"/>
     </CreateUnit>
-    <SelectorUnit gr:x="-210" gr:y="-155" id="sv1#seu5" name="SelectChat" entity="ent2">
+    <SelectorUnit gr:x="-210" gr:y="-155" id="sv1#seu5" name="SelectChat" entity="ent2" linkOrder="sv1#seu5#ln49">
       <Selector id="sv1#seu5#su4" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#seu5#su4#rcond6" name="RoleCondition6" predicate="in" implied="false" role="rel10#role20"/>
         <RelationshipRoleCondition id="sv1#seu5#su4#rcond10" name="RoleCondition10" predicate="in" implied="false" role="rel9#role18"/>
@@ -124,24 +128,34 @@
       </OKLink>
       <KOLink id="sv1#seu5#kln8" name="KOLink8" to="sv1#cru4">
         <LinkParameter id="sv1#seu5#kln8#par46" name="oid_Person.oid(ChatToPerson_2)" target="sv1#cru4.rel9#role17.ent1#att1" sourceLinkParameter="sv1#area7#page13#inu3#ln33#par49"/>
+        <LinkParameter id="sv1#seu5#kln8#par126" name="oid_PASSING" sourceLinkParameter="sv1#area7#page13#inu3#ln33#par49" passing="true"/>
       </KOLink>
       <Link id="sv1#seu5#ln27" name="Link27" to="sv1#stu1" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv1#seu5#ln49" name="Link49" to="sv1#stu2" type="transport" validate="true">
+        <LinkParameter id="sv1#seu5#ln49#par132" name="oid_PASSING_ChatPartnerCtxParam.oid" sourceLinkParameter="sv1#area7#page13#inu3#ln33#par49" target="sv1#stu2.ctx2.ent1#att1"/>
+      </Link>
     </SelectorUnit>
     <SetUnit gr:x="-50" gr:y="160" id="sv1#stu1" name="SetChat" contextParameters="ctx1"/>
     <CreateUnit gr:x="-420" gr:y="370" id="sv1#cru5" name="NewChatEntry" entity="ent3">
       <OKLink id="sv1#cru5#oln16" name="OKLink16" to="sv1#cnu1" automaticCoupling="true"/>
     </CreateUnit>
-    <GetUnit gr:x="-275" gr:y="465" id="sv1#gtu2" name="GetChat" contextParameters="ctx1" linkOrder="sv1#gtu2#ln32">
-      <Link id="sv1#gtu2#ln32" name="Link32" to="sv1#cnu1" automaticCoupling="true" type="transport" validate="true"/>
+    <GetUnit gr:x="-275" gr:y="465" id="sv1#gtu2" name="GetChat" contextParameters="ctx1">
+      <Link id="sv1#gtu2#ln32" name="Link32" to="sv1#cnu1" type="transport" validate="true">
+        <LinkParameter id="sv1#gtu2#ln32#par128" name="ChatCtxParam.oid_KeyCondition6 [oid] [Chat] [Target]" source="sv1#gtu2.ctx1.ent2#att10" target="sv1#cnu1#su20#kcond6.ent2#att10"/>
+        <LinkParameter id="sv1#gtu2#ln32#par129" name="ChatCtxParam.oid_PASSING" source="sv1#gtu2.ctx1.ent2#att10" passing="true"/>
+      </Link>
     </GetUnit>
-    <IsNotNullUnit gr:x="-270" gr:y="-30" id="sv1#inn1" name="ChatExistsTest">
-      <OKLink id="sv1#inn1#oln17" name="OKLink17" to="sv1#area7#page14#inu2">
-        <LinkParameter id="sv1#inn1#oln17#par57" name="Input Value_RoleCondition9 [oid]" source="inputValue" target="sv1#area7#page14#inu2#su13#rcond9.ent2#att10"/>
+    <IsNotNullUnit gr:x="-270" gr:y="-30" id="sv1#inn1" name="ChatExistsTest" linkOrder="sv1#inn1#ln57">
+      <OKLink id="sv1#inn1#oln17" name="OKLink17" to="sv1#area7#page14">
+        <LinkParameter id="sv1#inn1#oln17#par116" name="oid_PASSING" sourceLinkParameter="sv1#seu5#oln12#par50" passing="true"/>
       </OKLink>
       <KOLink id="sv1#inn1#kln9" name="KOLink9" to="sv1#seu10">
         <LinkParameter id="sv1#inn1#kln9#par104" name="oid_PASSING_RoleCondition6 [oid]" sourceLinkParameter="sv1#seu5#oln12#par50" target="sv1#seu10#su32#rcond17.ent1#att1"/>
         <LinkParameter id="sv1#inn1#kln9#par106" name="oid_PASSING" sourceLinkParameter="sv1#seu5#oln12#par50" passing="true"/>
       </KOLink>
+      <Link id="sv1#inn1#ln57" name="Link57" to="sv1#area7#page14#inu2" type="transport" validate="true" gr:bendpoints="-69,69,106,-61">
+        <LinkParameter id="sv1#inn1#ln57#par134" name="Input Value_RoleCondition9 [oid]" source="inputValue" target="sv1#area7#page14#inu2#su13#rcond9.ent2#att10"/>
+      </Link>
     </IsNotNullUnit>
     <ConnectUnit gr:x="-275" gr:y="325" id="sv1#cnu1" name="AddCEToChat" relationship="rel7#role14">
       <SourceSelector id="sv1#cnu1#su19" defaultPolicy="fill" booleanOperator="and">
@@ -150,7 +164,10 @@
       <TargetSelector id="sv1#cnu1#su20" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#cnu1#su20#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
       </TargetSelector>
-      <OKLink id="sv1#cnu1#oln18" name="OKLink18" to="sv1#area7#page14#inu2" automaticCoupling="true"/>
+      <OKLink id="sv1#cnu1#oln18" name="OKLink18" to="sv1#area7#page14">
+        <LinkParameter id="sv1#cnu1#oln18#par131" name="ChatCtxParam.oid_PASSING" sourceLinkParameter="sv1#gtu2#ln32#par129" passing="true"/>
+      </OKLink>
+      <Link id="sv1#cnu1#ln54" name="Link54" to="sv1#area7#page14#inu2" automaticCoupling="true" type="transport" validate="true"/>
     </ConnectUnit>
     <ConnectUnit gr:x="460" gr:y="665" id="sv1#cnu2" name="InterestPerson" relationship="rel6#role12">
       <SourceSelector id="sv1#cnu2#su22" defaultPolicy="fill" booleanOperator="and">
@@ -200,11 +217,16 @@
         <LinkParameter id="sv1#seu10#oln37#par107" name="oid_PASSING" sourceLinkParameter="sv1#inn1#kln9#par106" passing="true"/>
       </OKLink>
     </SelectorUnit>
-    <IsNotNullUnit gr:x="-305" gr:y="100" id="sv1#inn4" name="ChatExistsTest2">
-      <OKLink id="sv1#inn4#oln38" name="OKLink38" to="sv1#area7#page14#inu2" automaticCoupling="true"/>
+    <IsNotNullUnit gr:x="-305" gr:y="100" id="sv1#inn4" name="ChatExistsTest2" linkOrder="sv1#inn4#ln56">
+      <OKLink id="sv1#inn4#oln38" name="OKLink38" to="sv1#area7#page14">
+        <LinkParameter id="sv1#inn4#oln38#par118" name="oid_PASSING" sourceLinkParameter="sv1#seu10#oln37#par107" passing="true"/>
+      </OKLink>
       <KOLink id="sv1#inn4#kln25" name="KOLink25" to="sv1#cru4">
         <LinkParameter id="sv1#inn4#kln25#par108" name="oid_PASSING_Person.oid(ChatToPerson_2)" sourceLinkParameter="sv1#seu10#oln37#par107" target="sv1#cru4.rel9#role17.ent1#att1"/>
       </KOLink>
+      <Link id="sv1#inn4#ln56" name="Link56" to="sv1#area7#page14#inu2" type="transport" validate="true" gr:bendpoints="-71,15,79,15">
+        <LinkParameter id="sv1#inn4#ln56#par133" name="Input Value_RoleCondition9 [oid]" source="inputValue" target="sv1#area7#page14#inu2#su13#rcond9.ent2#att10"/>
+      </Link>
     </IsNotNullUnit>
     <SelectorUnit gr:x="680" gr:y="-370" id="sv1#seu8" name="GetFriends" entity="ent1">
       <Selector id="sv1#seu8#su1" defaultPolicy="fill" booleanOperator="and">
@@ -247,6 +269,12 @@
 def address = street+" "+streetnr+", "+zip+" "+city
 return address</ScriptUnitText>
     </ScriptUnit>
+    <SetUnit gr:x="-95" gr:y="255" id="sv1#stu2" name="SetChatPartner" contextParameters="ctx2"/>
+    <GetUnit gr:x="-625" gr:y="-100" id="sv1#gtu6" name="GetChatPartner" contextParameters="ctx2" linkOrder="sv1#gtu6#ln50">
+      <Link id="sv1#gtu6#ln50" name="Link50" to="sv1#area7#page14#seu13" type="transport" validate="true">
+        <LinkParameter id="sv1#gtu6#ln50#par135" name="ChatPartnerCtxParam.oid_RoleCondition8 [oid]" source="sv1#gtu6.ctx2.ent1#att1" target="sv1#area7#page14#seu13#su16#rcond8.ent1#att1"/>
+      </Link>
+    </GetUnit>
   </OperationUnits>
   <layout:UnitConfiguration unitType="GoogleMapUnit" layout:style="WRDefault"/>
 </SiteView>

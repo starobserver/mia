@@ -1,4 +1,4 @@
-<WebModel xmlns:layout="http://www.webratio.com/2006/WebML/Layout" defaultLocale="lcl1" layout:style="WebRatio" layout:layoutManager="grid" layout:inheritParameters="true" control="Ni4wQ2hhdEN0eFBhcmFtUGVyc29uQ3R4UGFyYW1Db3VudHJ5SVNPQ3R4UGFyYW1Hcm91cEN0eFBhcmFtTGFuZ3VhZ2VJU09DdHhQYXJhbQ==" baseVersion="6.0" homeSiteView="sv1">
+<WebModel xmlns:layout="http://www.webratio.com/2006/WebML/Layout" defaultLocale="lcl1" layout:style="WebRatio" layout:layoutManager="grid" layout:inheritParameters="true" control="Ni4wQ2hhdEN0eFBhcmFtQ2hhdFBhcnRuZXJDdHhQYXJhbVBlcnNvbkN0eFBhcmFtQ291bnRyeUlTT0N0eFBhcmFtR3JvdXBDdHhQYXJhbQ==" baseVersion="6.0" homeSiteView="sv1">
   <Locale id="lcl1" country="US" language="en">
     <PatternConfiguration type="boolean" pattern="yes|no"/>
     <PatternConfiguration type="decimal" useNumberPattern="false" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true"/>
@@ -14,4 +14,5 @@
   <ContextParameter id="CountryISOCtxParam" name="CountryISOCtxParam" type="string"/>
   <ContextParameter id="ctx3" name="PersonCtxParam" type="entity" entity="ent1"/>
   <ContextParameter id="ctx1" name="ChatCtxParam" type="entity" entity="ent2"/>
+  <ContextParameter id="ctx2" name="ChatPartnerCtxParam" type="entity" entity="ent1"/>
 </WebModel>

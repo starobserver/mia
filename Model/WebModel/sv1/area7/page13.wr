@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="5" gr:y="0" id="sv1#area7#page13" name="Select Chat Partner">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="130" gr:y="0" id="sv1#area7#page13" name="Select Chat Partner">
   <ContentUnits>
     <IndexUnit gr:x="0" gr:y="0" id="sv1#area7#page13#inu3" name="Friends for Chat" entity="ent1" linkOrder="sv1#area7#page13#inu3#ln33" displayAttributes="ent1#att2">
       <Selector id="sv1#area7#page13#inu3#su26" defaultPolicy="fill" booleanOperator="and">
