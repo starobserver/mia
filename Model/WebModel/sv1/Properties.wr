@@ -219,9 +219,11 @@
       <Selector id="sv1#seu12#su15" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#seu12#su15#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="sv1#seu12#oln14" name="OKLink10" to="sv1#ggu3">
-        <LinkParameter id="sv1#seu12#oln14#par12" name="street_Address" source="ent1#att4Array" target="sv1#ggu3.addr"/>
-        <LinkParameter id="sv1#seu12#oln14#par18" name="city_City" source="ent1#att6Array" target="sv1#ggu3.city"/>
+      <OKLink id="sv1#seu12#oln36" name="OKLink36" to="sv1#scu1">
+        <LinkParameter id="sv1#seu12#oln36#par98" name="city_city" source="ent1#att6Array" target="sv1#scu1.city"/>
+        <LinkParameter id="sv1#seu12#oln36#par100" name="street_street" source="ent1#att4Array" target="sv1#scu1.street"/>
+        <LinkParameter id="sv1#seu12#oln36#par101" name="streetnr_streetnr" source="ent1#att5Array" target="sv1#scu1.streetnr"/>
+        <LinkParameter id="sv1#seu12#oln36#par102" name="zip_zip" source="ent1#att7Array" target="sv1#scu1.zip"/>
       </OKLink>
     </SelectorUnit>
     <GoogleGeocodingUnit gr:x="1155" gr:y="-275" id="sv1#ggu3" name="GoogleGeocodingUnit3">
@@ -233,6 +235,18 @@
         <LinkParameter id="sv1#ggu3#oln25#par51" name="Friend_Marker Title" sourceValue="Friend" target="sv1#area3#page15#gmu1.markerTitle"/>
       </OKLink>
     </GoogleGeocodingUnit>
+    <ScriptUnit gr:x="1295" gr:y="-380" id="sv1#scu1" name="AddressScript">
+      <ScriptInput id="sv1#scu1#sci1" name="street"/>
+      <ScriptInput id="sv1#scu1#sci2" name="streetnr"/>
+      <ScriptInput id="sv1#scu1#sci3" name="city"/>
+      <ScriptInput id="sv1#scu1#sci4" name="zip"/>
+      <OKLink id="sv1#scu1#oln39" name="OKLink39" to="sv1#ggu3">
+        <LinkParameter id="sv1#scu1#oln39#par97" name="address_Full Address" source="result" target="sv1#ggu3.fulladdr"/>
+      </OKLink>
+      <ScriptUnitText xml:space="preserve">#input String street, int streetnr, int zip, String city
+def address = street+" "+streetnr+", "+zip+" "+city
+return address</ScriptUnitText>
+    </ScriptUnit>
   </OperationUnits>
   <layout:UnitConfiguration unitType="GoogleMapUnit" layout:style="WRDefault"/>
 </SiteView>
