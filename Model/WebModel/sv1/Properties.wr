@@ -103,7 +103,7 @@
       </Selector>
       <OKLink id="sv1#seu4#oln21" name="OKLink21" to="sv1#area7#page13#inu3" automaticCoupling="true"/>
     </SelectorUnit>
-    <CreateUnit gr:x="-230" gr:y="145" id="sv1#cru4" name="CreateChat" entity="ent2" linkOrder="sv1#cru4#ln24">
+    <CreateUnit gr:x="-190" gr:y="235" id="sv1#cru4" name="CreateChat" entity="ent2" linkOrder="sv1#cru4#ln24">
       <OKLink id="sv1#cru4#oln15" name="OKLink15" to="sv1#area7#page14#inu2">
         <LinkParameter id="sv1#cru4#oln15#par14" name="oid_RoleCondition9 [oid]" source="ent2#att10Array" target="sv1#area7#page14#inu2#su13#rcond9.ent2#att10"/>
       </OKLink>
@@ -123,7 +123,7 @@
       </KOLink>
       <Link id="sv1#seu5#ln27" name="Link27" to="sv1#stu1" automaticCoupling="true" type="transport" validate="true"/>
     </SelectorUnit>
-    <SetUnit gr:x="-130" gr:y="110" id="sv1#stu1" name="SetChat" contextParameters="ctx1"/>
+    <SetUnit gr:x="-50" gr:y="160" id="sv1#stu1" name="SetChat" contextParameters="ctx1"/>
     <CreateUnit gr:x="-420" gr:y="370" id="sv1#cru5" name="NewChatEntry" entity="ent3">
       <OKLink id="sv1#cru5#oln16" name="OKLink16" to="sv1#cnu1" automaticCoupling="true"/>
     </CreateUnit>
