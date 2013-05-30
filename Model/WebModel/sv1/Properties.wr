@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Main" landmarks="sv1#area1" homePage="sv1#area1#page1">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Main" landmarks="sv1#area1" homePage="sv1#area1#page1">
   <OperationUnits>
     <CreateUnit gr:x="655" gr:y="270" id="sv1#cru1" name="PersonCreateUnit" entity="ent1" linkOrder="sv1#cru1#ln15">
       <KOLink id="sv1#cru1#kln1" name="KOLink1" to="sv1#area4#page6" automaticCoupling="true"/>
@@ -206,5 +206,33 @@
         <LinkParameter id="sv1#inn4#kln25#par108" name="oid_PASSING_Person.oid(ChatToPerson_2)" sourceLinkParameter="sv1#seu10#oln37#par107" target="sv1#cru4.rel9#role17.ent1#att1"/>
       </KOLink>
     </IsNotNullUnit>
+    <SelectorUnit gr:x="680" gr:y="-370" id="sv1#seu8" name="GetFriends" entity="ent1">
+      <Selector id="sv1#seu8#su1" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#seu8#su1#rcond1" name="RoleCondition1" predicate="in" implied="false" role="rel1#role2"/>
+      </Selector>
+      <OKLink id="sv1#seu8#oln8" name="OKLink8" to="sv1#area3#page12#inu1" automaticCoupling="true"/>
+    </SelectorUnit>
+    <GetUnit gr:x="575" gr:y="-490" id="sv1#gtu5" name="GetPerson" contextParameters="ctx3" linkOrder="sv1#gtu5#ln35">
+      <Link id="sv1#gtu5#ln35" name="Link35" to="sv1#seu8" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <SelectorUnit gr:x="1140" gr:y="-425" id="sv1#seu12" name="GetPerson" entity="ent1">
+      <Selector id="sv1#seu12#su15" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#seu12#su15#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#seu12#oln14" name="OKLink10" to="sv1#ggu3">
+        <LinkParameter id="sv1#seu12#oln14#par12" name="street_Address" source="ent1#att4Array" target="sv1#ggu3.addr"/>
+        <LinkParameter id="sv1#seu12#oln14#par18" name="city_City" source="ent1#att6Array" target="sv1#ggu3.city"/>
+      </OKLink>
+    </SelectorUnit>
+    <GoogleGeocodingUnit gr:x="1155" gr:y="-275" id="sv1#ggu3" name="GoogleGeocodingUnit3">
+      <OKLink id="sv1#ggu3#oln25" name="OKLink25" to="sv1#area3#page15#gmu1">
+        <LinkParameter id="sv1#ggu3#oln25#par11" name="Map Coordinates_Map Coordinates" source="coords" target="sv1#area3#page15#gmu1.coords"/>
+        <LinkParameter id="sv1#ggu3#oln25#par39" name="Map Coordinates_Marker Coordinates" source="coords" target="sv1#area3#page15#gmu1.markerCoords"/>
+        <LinkParameter id="sv1#ggu3#oln25#par47" name="10_Map Zoom" sourceValue="10" target="sv1#area3#page15#gmu1.zoom"/>
+        <LinkParameter id="sv1#ggu3#oln25#par48" name="FriendsHome_Marker Info" sourceValue="FriendsHome" target="sv1#area3#page15#gmu1.markerInfo"/>
+        <LinkParameter id="sv1#ggu3#oln25#par51" name="Friend_Marker Title" sourceValue="Friend" target="sv1#area3#page15#gmu1.markerTitle"/>
+      </OKLink>
+    </GoogleGeocodingUnit>
   </OperationUnits>
+  <layout:UnitConfiguration unitType="GoogleMapUnit" layout:style="WRDefault"/>
 </SiteView>

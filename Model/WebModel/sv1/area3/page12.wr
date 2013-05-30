@@ -1,0 +1,31 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area3#page12" name="FriendSelection">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="0" id="sv1#area3#page12#inu1" name="Select Friend" entity="ent1" linkOrder="sv1#area3#page12#inu1#ln39" displayAttributes="ent1#att2">
+      <Selector id="sv1#area3#page12#inu1#su14" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area3#page12#inu1#su14#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#area3#page12#inu1#ln39" name="show Location" to="sv1#seu12" automaticCoupling="true" type="normal" validate="true"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area3#page12#inu1">
+          <layout:Link link="sv1#area3#page12#inu1#ln39"/>
+          <layout:Attribute attribute="ent1#att2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

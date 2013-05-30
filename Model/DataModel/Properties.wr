@@ -85,8 +85,7 @@
       <db:JoinColumn attribute="ent1#att1" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="MIA" type="MySQL" url="jdbc:mysql://marce.at:3306/MIA" username="miadbuser" cryptedPassword="true" password="bWlhZGJwYXNz">
-  </db:Database>
+  <db:Database id="db2" name="MIA" type="MySQL" url="jdbc:mysql://marce.at:3306/MIA" username="miadbuser" cryptedPassword="true" password="bWlhZGJwYXNz"/>
   <Relationship id="rel1" name="Friends" sourceEntity="ent1" targetEntity="ent1" gr:bendpoints="103,38,103,38;103,-38,103,-38" db:database="db2" db:table="friends_2">
     <RelationshipRole1 id="rel1#role1" name="PersonToPerson1" maxCard="N">
       <db:JoinColumn attribute="ent1#att1" name="person_oid"/>

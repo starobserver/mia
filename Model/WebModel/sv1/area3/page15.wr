@@ -1,0 +1,41 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="20" gr:y="190" id="sv1#area3#page15" name="Show Location" linkOrder="sv1#area3#page15#ln41" layout:layoutManager="standard">
+  <ContentUnits>
+    <GoogleMapUnit gr:x="0" gr:y="0" id="sv1#area3#page15#gmu1" name="Map" mapType="HYBRID" isAdjustable="false">
+      <Marker id="sv1#area3#page15#gmu1#mrk1" name="Marker1"/>
+    </GoogleMapUnit>
+  </ContentUnits>
+  <layout:Grid layout:cellLayout="None">
+    <layout:Row>
+      <layout:Cell colspan="12" rowspan="2">
+        <layout:Unit unitId="sv1#area3#page15#gmu1"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv1#area3#page15#ln41" name="back" to="sv1#area3#page12" automaticCoupling="true" type="normal" validate="true"/>
+  <layout:UnitConfiguration unitType="GoogleMapUnit" layout:unitLayout="StoreTemplates/Default"/>
+</Page>
