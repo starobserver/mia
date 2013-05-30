@@ -1,9 +1,8 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="265" gr:y="140" id="sv1#area1#page4" name="InterestPage" landmark="false" protected="false" linkVisibilityPolicy="hide">
   <ContentUnits>
     <MultiChoiceIndexUnit gr:x="0" gr:y="95" id="sv1#area1#page4#mciu1" name="InterestSelection" entity="ent4" linkOrder="sv1#area1#page4#mciu1#ln16" displayAttributes="ent4#att15">
-      <Link id="sv1#area1#page4#mciu1#ln16" name="Save My Interests" to="sv1#rcnu1" type="normal" validate="true">
-        <LinkParameter id="sv1#area1#page4#mciu1#ln16#par1" name="Checked oid_KeyCondition1 [oid] [Interest] [ConnectSource]" source="ent4#att14Checked" target="sv1#rcnu1#su1#kcond1.ent4#att14"/>
-        <LinkParameter id="sv1#area1#page4#mciu1#ln16#par2" name="oid (Single Row)_RoleCondition1 [oid] [Interest] [DisconnectTarget]" source="ent4#att14Checked" target="sv1#rcnu1#su15#rcond1.ent4#att14"/>
+      <Link id="sv1#area1#page4#mciu1#ln16" name="Save My Interests" to="sv1#cnu2" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page4#mciu1#ln16#par16" name="Checked oid_KeyCondition14 [oid] [Interest] [Source]" source="ent4#att14Checked" target="sv1#cnu2#su22#kcond14.ent4#att14"/>
       </Link>
       <PreSelector id="sv1#area1#page4#mciu1#su5" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area1#page4#mciu1#su5#rcond3" name="RoleCondition3" role="rel6#role11" predicate="in" implied="false"/>

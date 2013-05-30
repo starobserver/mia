@@ -104,14 +104,29 @@ alter table `friends_2`   add index fk_friends_2_person (`person_oid`), add cons
 alter table `friends_2`   add index fk_friends_2_person_2 (`person_oid_2`), add constraint fk_friends_2_person_2 foreign key (`person_oid_2`) references `person` (`oid`);
 
 
--- participant2 [rel10]
-alter table `chat`  add column  `person_oid`  integer;
-alter table `chat`   add index fk_chat_person_2 (`person_oid`), add constraint fk_chat_person_2 foreign key (`person_oid`) references `person` (`oid`);
-
-
 -- User_Person [rel13]
 alter table `person`  add column  `user_oid`  integer;
 alter table `person`   add index fk_person_user (`user_oid`), add constraint fk_person_user foreign key (`user_oid`) references `user` (`oid`);
+
+
+-- participant1 [rel2]
+alter table `chat`  add column  `part1_oid`  integer;
+alter table `chat`   add index fk_chat_person (`part1_oid`), add constraint fk_chat_person foreign key (`part1_oid`) references `person` (`oid`);
+
+
+-- participant2 [rel3]
+alter table `chat`  add column  `part2_oid`  integer;
+alter table `chat`   add index fk_chat_person_2 (`part2_oid`), add constraint fk_chat_person_2 foreign key (`part2_oid`) references `person` (`oid`);
+
+
+-- ChatEntry_Author [rel4]
+alter table `chatentry`  add column  `author_oid`  integer;
+alter table `chatentry`   add index fk_chatentry_person (`author_oid`), add constraint fk_chatentry_person foreign key (`author_oid`) references `person` (`oid`);
+
+
+-- Chat_ChatEntry [rel5]
+alter table `chatentry`  add column  `chat_oid`  integer;
+alter table `chatentry`   add index fk_chatentry_chat (`chat_oid`), add constraint fk_chatentry_chat foreign key (`chat_oid`) references `chat` (`oid`);
 
 
 -- Person_Interest [rel6]
@@ -122,20 +137,5 @@ create table `person_interest` (
 );
 alter table `person_interest`   add index fk_person_interest_person (`person_oid`), add constraint fk_person_interest_person foreign key (`person_oid`) references `person` (`oid`);
 alter table `person_interest`   add index fk_person_interest_interest (`interest_oid`), add constraint fk_person_interest_interest foreign key (`interest_oid`) references `interest` (`oid`);
-
-
--- Chat_ChatEntry [rel7]
-alter table `chatentry`  add column  `chat_oid`  integer;
-alter table `chatentry`   add index fk_chatentry_chat (`chat_oid`), add constraint fk_chatentry_chat foreign key (`chat_oid`) references `chat` (`oid`);
-
-
--- ChatEntry_Person [rel8]
-alter table `chatentry`  add column  `person_oid`  integer;
-alter table `chatentry`   add index fk_chatentry_person (`person_oid`), add constraint fk_chatentry_person foreign key (`person_oid`) references `person` (`oid`);
-
-
--- participant1 [rel9]
-alter table `chat`  add column  `person_oid_2`  integer;
-alter table `chat`   add index fk_chat_person (`person_oid_2`), add constraint fk_chat_person foreign key (`person_oid_2`) references `person` (`oid`);
 
 

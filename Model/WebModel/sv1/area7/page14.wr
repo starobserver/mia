@@ -1,0 +1,56 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="145" id="sv1#area7#page14" name="Chat">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="0" id="sv1#area7#page14#inu2" name="ChatLog" entity="ent3" displayAttributes="ent3#att12 rel8#role15.ent1#att2 ent3#att13">
+      <Selector id="sv1#area7#page14#inu2#su13" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area7#page14#inu2#su13#rcond9" name="RoleCondition9" predicate="in" implied="false" role="rel7#role13"/>
+      </Selector>
+    </IndexUnit>
+    <EntryUnit gr:x="15" gr:y="105" id="sv1#area7#page14#enu5" name="Add Message" fieldOrder="sv1#area7#page14#enu5#fld1" linkOrder="sv1#area7#page14#enu5#ln28">
+      <Field id="sv1#area7#page14#enu5#fld1" name="Message" type="string" modifiable="true"/>
+      <Link id="sv1#area7#page14#enu5#ln28" name="Add Msg" to="sv1#cru5" type="normal" validate="true">
+        <LinkParameter id="sv1#area7#page14#enu5#ln28#par15" name="Message_text" source="sv1#area7#page14#enu5#fld1" target="sv1#cru5.ent3#att13"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area7#page14#inu2">
+          <layout:Attribute attribute="ent3#att12"/>
+          <layout:Attribute attribute="rel8#role15.ent1#att2"/>
+          <layout:Attribute attribute="ent3#att13"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area7#page14#enu5">
+          <layout:Field field="sv1#area7#page14#enu5#fld1"/>
+          <layout:Link link="sv1#area7#page14#enu5#ln28"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

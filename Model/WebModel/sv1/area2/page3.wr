@@ -1,12 +1,12 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area2#page3" name="Registration">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv1#area2#page3#enu4" name="RegFormPerson" fieldOrder="sv1#area2#page3#enu4#fld19 sv1#area2#page3#enu4#fld20 sv1#area2#page3#enu4#fld21 sv1#area2#page3#enu4#fld22 sv1#area2#page3#enu4#fld23 sv1#area2#page3#enu4#fld24 sv1#area2#page3#enu4#fld26 sv1#area2#page3#enu4#sfld2" linkOrder="sv1#area2#page3#enu4#ln9">
-      <SelectionField id="sv1#area2#page3#enu4#sfld2" name="gender" type="string" modifiable="true">
-        <Slot id="sv1#area2#page3#enu4#sfld2#slot3" name="female" label="true" output="true"/>
-        <Slot id="sv1#area2#page3#enu4#sfld2#slot4" name="male" label="true" output="true"/>
+      <SelectionField id="sv1#area2#page3#enu4#sfld2" name="gender" type="string" modifiable="true" slotOrder="sv1#area2#page3#enu4#sfld2#slot3 sv1#area2#page3#enu4#sfld2#slot4" preselectValue="male">
+        <Slot id="sv1#area2#page3#enu4#sfld2#slot3" name="female" output="true" value="female" label="true"/>
+        <Slot id="sv1#area2#page3#enu4#sfld2#slot4" name="male" output="true" value="male" label="true"/>
       </SelectionField>
       <Field id="sv1#area2#page3#enu4#fld26" name="PhoneNumber" type="string" modifiable="true"/>
-      <Field id="sv1#area2#page3#enu4#fld24" name="Birthdate" type="string" modifiable="true"/>
+      <Field id="sv1#area2#page3#enu4#fld24" name="Birthdate" type="date" modifiable="true"/>
       <Field id="sv1#area2#page3#enu4#fld23" name="City" type="string" modifiable="true"/>
       <Field id="sv1#area2#page3#enu4#fld22" name="Zip" type="string" modifiable="true"/>
       <Field id="sv1#area2#page3#enu4#fld21" name="Streetnumber" type="string" modifiable="true"/>

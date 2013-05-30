@@ -60,43 +60,11 @@
   <Entity gr:x="50" gr:y="300" id="ent2" name="Chat" duration="persistent" db:database="db2" db:table="chat">
     <Attribute id="ent2#att10" key="true" name="oid" type="integer" db:column="oid"/>
   </Entity>
-  <Relationship id="rel2" name="participant1" sourceEntity="ent2" targetEntity="ent1" gr:bendpoints="126,-51,-134,-56" db:database="db2" db:table="person">
-    <RelationshipRole1 id="rel2#role3" name="ChatToPerson" maxCard="N">
-      <db:JoinColumn attribute="ent2#att10" name="chat_oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel2#role4" name="PersonToChat" maxCard="1">
-      <db:JoinColumn attribute="ent1#att1" name="oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel3" name="participant2" sourceEntity="ent2" targetEntity="ent1" gr:bendpoints="123,37,-137,32" db:database="db2" db:table="person">
-    <RelationshipRole1 id="rel3#role5" name="ChatToPerson_2" maxCard="N">
-      <db:JoinColumn attribute="ent2#att10" name="chat_oid_2"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel3#role6" name="PersonToChat_2" maxCard="1">
-      <db:JoinColumn attribute="ent1#att1" name="oid"/>
-    </RelationshipRole2>
-  </Relationship>
   <Entity gr:x="55" gr:y="445" id="ent3" name="ChatEntry" duration="persistent" attributeOrder="ent3#att11 ent3#att12 ent3#att13" db:database="db2" db:table="chatentry">
     <Attribute id="ent3#att11" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att12" name="time" type="timestamp" key="false" db:column="time"/>
     <Attribute id="ent3#att13" name="text" type="string" db:column="text"/>
   </Entity>
-  <Relationship id="rel4" name="ChatEntry_Author" sourceEntity="ent3" targetEntity="ent1" db:database="db2" db:table="person">
-    <RelationshipRole1 id="rel4#role7" name="ChatEntryToPerson" maxCard="N">
-      <db:JoinColumn attribute="ent3#att11" name="chatentry_oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel4#role8" name="PersonToChatEntry" maxCard="1">
-      <db:JoinColumn attribute="ent1#att1" name="oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel5" name="Chat_ChatEntry" sourceEntity="ent2" targetEntity="ent3" db:database="db2" db:table="chat">
-    <RelationshipRole1 id="rel5#role9" name="ChatToChatEntry" maxCard="1">
-      <db:JoinColumn attribute="ent2#att10" name="oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel5#role10" name="ChatEntryToChat" maxCard="N">
-      <db:JoinColumn attribute="ent3#att11" name="chatentry_oid"/>
-    </RelationshipRole2>
-  </Relationship>
   <Entity gr:x="520" gr:y="480" id="ent4" name="Interest" duration="persistent" attributeOrder="ent4#att14 ent4#att15" db:database="db2" db:table="interest">
     <Attribute id="ent4#att14" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent4#att15" name="description" type="string" key="false" db:column="description"/>
@@ -117,13 +85,46 @@
       <db:JoinColumn attribute="ent1#att1" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="MIA" type="MySQL" url="jdbc:mysql://marce.at:3306/MIA" username="miadbuser" cryptedPassword="true" password="bWlhZGJwYXNz"/>
+  <db:Database id="db2" name="MIA" type="MySQL" url="jdbc:mysql://marce.at:3306/MIA" username="miadbuser" cryptedPassword="true" password="bWlhZGJwYXNz">
+  </db:Database>
   <Relationship id="rel1" name="Friends" sourceEntity="ent1" targetEntity="ent1" gr:bendpoints="103,38,103,38;103,-38,103,-38" db:database="db2" db:table="friends_2">
     <RelationshipRole1 id="rel1#role1" name="PersonToPerson1" maxCard="N">
       <db:JoinColumn attribute="ent1#att1" name="person_oid"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel1#role2" name="PersonToPerson2" maxCard="N">
       <db:JoinColumn attribute="ent1#att1" name="person_oid_2"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel7" name="Chat_ChatEntry" sourceEntity="ent2" targetEntity="ent3" db:database="db2" db:table="chatentry">
+    <RelationshipRole1 id="rel7#role13" name="ChatToChatEntry" maxCard="N">
+      <db:JoinColumn attribute="ent2#att10" name="chat_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel7#role14" name="ChatEntryToChat" maxCard="1">
+      <db:JoinColumn attribute="ent3#att11" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel8" name="ChatEntry_Person" sourceEntity="ent3" targetEntity="ent1" db:database="db2" db:table="chatentry">
+    <RelationshipRole1 id="rel8#role15" name="ChatEntryToPerson" maxCard="1">
+      <db:JoinColumn attribute="ent3#att11" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel8#role16" name="PersonToChatEntry" maxCard="N">
+      <db:JoinColumn attribute="ent1#att1" name="person_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel9" name="participant1" sourceEntity="ent2" targetEntity="ent1" db:database="db2" db:table="chat">
+    <RelationshipRole1 id="rel9#role17" name="ChatToPerson_2" maxCard="1">
+      <db:JoinColumn attribute="ent2#att10" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel9#role18" name="PersonToChat_2" maxCard="N">
+      <db:JoinColumn attribute="ent1#att1" name="person_oid_2"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel10" name="participant2" sourceEntity="ent2" targetEntity="ent1" gr:bendpoints="118,-38,-142,-43" db:database="db2" db:table="chat">
+    <RelationshipRole1 id="rel10#role19" name="ChatToPerson" maxCard="1">
+      <db:JoinColumn attribute="ent2#att10" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel10#role20" name="PersonToChat" maxCard="N">
+      <db:JoinColumn attribute="ent1#att1" name="person_oid"/>
     </RelationshipRole2>
   </Relationship>
 </DataModel>

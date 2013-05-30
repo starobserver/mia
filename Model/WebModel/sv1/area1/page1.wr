@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="275" gr:y="0" id="sv1#area1#page1" name="Home" landmark="true" linkOrder="sv1#area1#page1#ln7 sv1#area1#page1#ln11 sv1#area1#page1#ln19 sv1#area1#page1#ln25">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="275" gr:y="0" id="sv1#area1#page1" name="Home" landmark="true" linkOrder="sv1#area1#page1#ln7 sv1#area1#page1#ln11 sv1#area1#page1#ln19 sv1#area1#page1#ln25 sv1#area1#page1#ln20">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#area1#page1#mssu2" name="Welcome">
       <Message xml:space="preserve">Homepage</Message>
@@ -40,4 +40,5 @@
   <Link id="sv1#area1#page1#ln11" name="Logout" to="sv1#area5#lou1" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-408,216,-118,-339"/>
   <Link id="sv1#area1#page1#ln19" name="Interests" to="sv1#seu3" automaticCoupling="true" type="normal" validate="true"/>
   <Link id="sv1#area1#page1#ln25" name="SelectFriends" to="sv1#seu6" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-88,363,112,-347"/>
+  <Link id="sv1#area1#page1#ln20" name="Chat" to="sv1#seu4" automaticCoupling="true" type="normal" validate="true"/>
 </Page>
