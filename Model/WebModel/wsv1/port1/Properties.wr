@@ -1,29 +1,38 @@
-<Port xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="495" gr:y="245" id="wsv1#port1" name="Chat">
+<Port xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="505" gr:y="230" id="wsv1#port1" name="Chat">
   <OperationUnits>
-    <SolicitUnit id="wsv1#port1#slu1" name="GetChatProtocol" invocationStyle="REST" gr:x="30" gr:y="10">
+    <SolicitUnit id="wsv1#port1#slu1" name="GetChatProtocol" invocationStyle="REST" gr:x="0" gr:y="0">
       <SolicitParameter id="wsv1#port1#slu1#slp1" name="userid1" xsdType="{http://www.w3.org/2001/XMLSchema}integer[SimpleType]"/>
       <SolicitParameter id="wsv1#port1#slu1#slp2" name="userid2" xsdType="{http://www.w3.org/2001/XMLSchema}integer[SimpleType]"/>
-      <OKLink id="wsv1#port1#slu1#oln24" name="OKLink24" to="wsv1#port1#seu1"/>
-      <KOLink id="wsv1#port1#slu1#kln12" name="KOLink12" to="wsv1#port1#eru1" automaticCoupling="true"/>
+      <OKLink id="wsv1#port1#slu1#oln24" name="OKLink24" to="wsv1#port1#seu1">
+        <LinkParameter id="wsv1#port1#slu1#oln24#par109" name="userid1 (Array)_RoleCondition11 [oid]" source="map(wsv1#port1#slu1#slp1)" target="wsv1#port1#seu1#su29#rcond11.ent1#att1"/>
+        <LinkParameter id="wsv1#port1#slu1#oln24#par110" name="userid2 (Array)_RoleCondition12 [oid]" source="map(wsv1#port1#slu1#slp2)" target="wsv1#port1#seu1#su29#rcond12.ent1#att1"/>
+        <LinkParameter id="wsv1#port1#slu1#oln24#par111" name="userid1 (Array)_PASSING" source="map(wsv1#port1#slu1#slp1)" passing="true"/>
+        <LinkParameter id="wsv1#port1#slu1#oln24#par112" name="userid2 (Array)_PASSING" source="map(wsv1#port1#slu1#slp2)" passing="true"/>
+      </OKLink>
+      <KOLink id="wsv1#port1#slu1#kln12" name="KOLink12" to="wsv1#port1#eru1" automaticCoupling="true" gr:bendpoints="16,228,-384,18"/>
     </SolicitUnit>
-    <XMLOutUnit gr:x="510" gr:y="20" id="wsv1#port1#xou1" name="GetProtocol" oldDocStyle="false">
+    <XMLOutUnit gr:x="580" gr:y="10" id="wsv1#port1#xou1" name="GetProtocol" oldDocStyle="false">
       <XMLOutEntity id="wsv1#port1#xou1#xoe1" name="ChatProtocol" useNames="false" entity="ent3" exportedAttributes="ent3#att12 rel8#role15.ent1#att2 ent3#att13"/>
       <OKLink id="wsv1#port1#xou1#oln26" name="OKLink26" to="wsv1#port1#rsu1" automaticCoupling="true"/>
       <KOLink id="wsv1#port1#xou1#kln14" name="KOLink14" to="wsv1#port1#eru1" automaticCoupling="true"/>
     </XMLOutUnit>
-    <ErrorResponseUnit gr:x="315" gr:y="150" id="wsv1#port1#eru1" name="GetChatProtocolError"/>
-    <ResponseUnit gr:x="695" gr:y="20" id="wsv1#port1#rsu1" name="SendChatProtocol">
+    <ErrorResponseUnit gr:x="385" gr:y="210" id="wsv1#port1#eru1" name="GetChatProtocolError"/>
+    <ResponseUnit gr:x="695" gr:y="10" id="wsv1#port1#rsu1" name="SendChatProtocol">
       <KOLink id="wsv1#port1#rsu1#kln15" name="KOLink15" to="wsv1#port1#eru1" automaticCoupling="true"/>
     </ResponseUnit>
-    <SelectorUnit gr:x="285" gr:y="0" id="wsv1#port1#seu1" name="GetChat" entity="ent2">
+    <SelectorUnit gr:x="140" gr:y="80" id="wsv1#port1#seu1" name="GetChat" entity="ent2">
       <Selector id="wsv1#port1#seu1#su29" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="wsv1#port1#seu1#su29#rcond11" name="RoleCondition11" predicate="in" implied="false" role="rel10#role20"/>
         <RelationshipRoleCondition id="wsv1#port1#seu1#su29#rcond12" name="RoleCondition12" predicate="in" implied="false" role="rel9#role18"/>
       </Selector>
       <KOLink id="wsv1#port1#seu1#kln13" name="KOLink13" to="wsv1#port1#eru1" automaticCoupling="true"/>
-      <OKLink id="wsv1#port1#seu1#oln27" name="OKLink27" to="wsv1#port1#xou1" automaticCoupling="true"/>
+      <OKLink id="wsv1#port1#seu1#oln27" name="OKLink27" to="wsv1#port1#inn5">
+        <LinkParameter id="wsv1#port1#seu1#oln27#par113" name="oid_Input" source="ent2#att10Array" target="wsv1#port1#inn5.isnotnull"/>
+        <LinkParameter id="wsv1#port1#seu1#oln27#par114" name="userid1 (Array)_PASSING" sourceLinkParameter="wsv1#port1#slu1#oln24#par111" passing="true"/>
+        <LinkParameter id="wsv1#port1#seu1#oln27#par115" name="userid2 (Array)_PASSING" sourceLinkParameter="wsv1#port1#slu1#oln24#par112" passing="true"/>
+      </OKLink>
     </SelectorUnit>
-    <SolicitUnit gr:x="0" gr:y="415" id="wsv1#port1#slu2" name="AddChatMsg" invocationStyle="REST">
+    <SolicitUnit gr:x="0" gr:y="405" id="wsv1#port1#slu2" name="AddChatMsg" invocationStyle="REST">
       <SolicitParameter id="wsv1#port1#slu2#slp3" name="author"/>
       <SolicitParameter id="wsv1#port1#slu2#slp4" name="receiver"/>
       <OKLink id="wsv1#port1#slu2#oln28" name="OKLink28" to="wsv1#port1#seu7">
@@ -36,7 +45,7 @@
       <SolicitParameter id="wsv1#port1#slu2#slp5" name="message"/>
       <KOLink id="wsv1#port1#slu2#kln18" name="KOLink18" to="wsv1#port1#eru2" automaticCoupling="true"/>
     </SolicitUnit>
-    <SelectorUnit gr:x="85" gr:y="520" id="wsv1#port1#seu7" name="GetChat" entity="ent2">
+    <SelectorUnit gr:x="85" gr:y="510" id="wsv1#port1#seu7" name="GetChat" entity="ent2">
       <Selector id="wsv1#port1#seu7#su30" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="wsv1#port1#seu7#su30#rcond13" name="RoleCondition13" predicate="in" implied="false" role="rel10#role20"/>
         <RelationshipRoleCondition id="wsv1#port1#seu7#su30#rcond14" name="RoleCondition14" predicate="in" implied="false" role="rel9#role18"/>
@@ -47,9 +56,9 @@
         <LinkParameter id="wsv1#port1#seu7#oln29#par72" name="message (Array)_PASSING" sourceLinkParameter="wsv1#port1#slu2#oln28#par71" passing="true"/>
         <LinkParameter id="wsv1#port1#seu7#oln29#par94" name="oid_Input" source="ent2#att10Array" target="wsv1#port1#inn2.isnotnull"/>
       </OKLink>
-      <KOLink id="wsv1#port1#seu7#kln19" name="KOLink19" to="wsv1#port1#eru2" automaticCoupling="true"/>
+      <KOLink id="wsv1#port1#seu7#kln19" name="KOLink19" to="wsv1#port1#eru2" automaticCoupling="true" gr:bendpoints="34,-126,-271,124"/>
     </SelectorUnit>
-    <IsNotNullUnit gr:x="200" gr:y="445" id="wsv1#port1#inn2" name="Check">
+    <IsNotNullUnit gr:x="200" gr:y="435" id="wsv1#port1#inn2" name="Check">
       <KOLink id="wsv1#port1#inn2#kln16" name="KOLink16" to="wsv1#port1#seu9">
         <LinkParameter id="wsv1#port1#inn2#kln16#par69" name="receiver (Array)_PASSING_RoleCondition13 [oid]" sourceLinkParameter="wsv1#port1#seu7#oln29#par68" target="wsv1#port1#seu9#su31#rcond15.ent1#att1"/>
         <LinkParameter id="wsv1#port1#inn2#kln16#par70" name="author (Array)_PASSING_RoleCondition14 [oid]" sourceLinkParameter="wsv1#port1#seu7#oln29#par67" target="wsv1#port1#seu9#su31#rcond16.ent1#att1"/>
@@ -63,7 +72,7 @@
         <LinkParameter id="wsv1#port1#inn2#oln32#par89" name="message (Array)_PASSING_text" sourceLinkParameter="wsv1#port1#seu7#oln29#par72" target="wsv1#port1#cru6.ent3#att13"/>
       </OKLink>
     </IsNotNullUnit>
-    <SelectorUnit id="wsv1#port1#seu9" name="GetChat" gr:x="295" gr:y="515" entity="ent2">
+    <SelectorUnit id="wsv1#port1#seu9" name="GetChat" gr:x="295" gr:y="505" entity="ent2">
       <Selector id="wsv1#port1#seu9#su31" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="wsv1#port1#seu9#su31#rcond15" name="RoleCondition13" predicate="in" implied="false" role="rel10#role20"/>
         <RelationshipRoleCondition id="wsv1#port1#seu9#su31#rcond16" name="RoleCondition14" predicate="in" implied="false" role="rel9#role18"/>
@@ -76,7 +85,7 @@
       </OKLink>
       <KOLink id="wsv1#port1#seu9#kln20" name="KOLink20" to="wsv1#port1#eru2" automaticCoupling="true"/>
     </SelectorUnit>
-    <IsNotNullUnit gr:x="455" gr:y="505" id="wsv1#port1#inn3" name="Check2">
+    <IsNotNullUnit gr:x="455" gr:y="495" id="wsv1#port1#inn3" name="Check2">
       <KOLink id="wsv1#port1#inn3#kln17" name="KOLink17" to="wsv1#port1#cru7">
         <LinkParameter id="wsv1#port1#inn3#kln17#par79" name="author (Array)_PASSING_Person.oid(ChatToPerson)" sourceLinkParameter="wsv1#port1#seu9#oln31#par76" target="wsv1#port1#cru7.rel10#role19.ent1#att1"/>
         <LinkParameter id="wsv1#port1#inn3#kln17#par80" name="receiver (Array)_PASSING_Person.oid(ChatToPerson_2)" sourceLinkParameter="wsv1#port1#seu9#oln31#par78" target="wsv1#port1#cru7.rel9#role17.ent1#att1"/>
@@ -90,13 +99,13 @@
         <LinkParameter id="wsv1#port1#inn3#oln33#par92" name="message (Array)_PASSING_text" sourceLinkParameter="wsv1#port1#seu9#oln31#par77" target="wsv1#port1#cru6.ent3#att13"/>
       </OKLink>
     </IsNotNullUnit>
-    <CreateUnit gr:x="615" gr:y="455" id="wsv1#port1#cru6" name="AddChatEntry" entity="ent3">
+    <CreateUnit gr:x="615" gr:y="445" id="wsv1#port1#cru6" name="AddChatEntry" entity="ent3">
       <OKLink id="wsv1#port1#cru6#oln35" name="OKLink35" to="wsv1#port1#rsu2">
         <LinkParameter id="wsv1#port1#cru6#oln35#par93" name="true_success" sourceValue="true" target="wsv1#port1#rsu2.wsv1#port1#rsu2#rsp1"/>
       </OKLink>
       <KOLink id="wsv1#port1#cru6#kln22" name="KOLink22" to="wsv1#port1#eru2" automaticCoupling="true"/>
     </CreateUnit>
-    <CreateUnit gr:x="530" gr:y="620" id="wsv1#port1#cru7" name="AddChat" entity="ent2">
+    <CreateUnit gr:x="530" gr:y="610" id="wsv1#port1#cru7" name="AddChat" entity="ent2">
       <OKLink id="wsv1#port1#cru7#oln34" name="OKLink34" to="wsv1#port1#cru6">
         <LinkParameter id="wsv1#port1#cru7#oln34#par84" name="oid_Chat.oid(ChatEntryToChat)" source="ent2#att10Array" target="wsv1#port1#cru6.rel7#role14.ent2#att10"/>
         <LinkParameter id="wsv1#port1#cru7#oln34#par85" name="author (Array)_PASSING_Person.oid(ChatEntryToPerson)" sourceLinkParameter="wsv1#port1#inn3#kln17#par81" target="wsv1#port1#cru6.rel8#role15.ent1#att1"/>
@@ -104,10 +113,35 @@
       </OKLink>
       <KOLink id="wsv1#port1#cru7#kln21" name="KOLink21" to="wsv1#port1#eru2" automaticCoupling="true"/>
     </CreateUnit>
-    <ResponseUnit gr:x="725" gr:y="350" id="wsv1#port1#rsu2" name="AddCEResult">
+    <ResponseUnit gr:x="725" gr:y="340" id="wsv1#port1#rsu2" name="AddCEResult">
       <ResponseParameter id="wsv1#port1#rsu2#rsp1" name="success" xsdType="{http://www.w3.org/2001/XMLSchema}boolean[SimpleType]"/>
       <KOLink id="wsv1#port1#rsu2#kln23" name="KOLink23" to="wsv1#port1#eru2" automaticCoupling="true"/>
     </ResponseUnit>
-    <ErrorResponseUnit gr:x="390" gr:y="295" id="wsv1#port1#eru2" name="AddChatEntryError"/>
+    <ErrorResponseUnit gr:x="390" gr:y="285" id="wsv1#port1#eru2" name="AddChatEntryError"/>
+    <IsNotNullUnit gr:x="210" gr:y="5" id="wsv1#port1#inn5" name="Check">
+      <KOLink id="wsv1#port1#inn5#kln27" name="KOLink27" to="wsv1#port1#seu11" gr:bendpoints="62,48,-103,-37">
+        <LinkParameter id="wsv1#port1#inn5#kln27#par119" name="userid2 (Array)_PASSING_RoleCondition11 [oid]" sourceLinkParameter="wsv1#port1#seu1#oln27#par115" target="wsv1#port1#seu11#su33#rcond19.ent1#att1"/>
+        <LinkParameter id="wsv1#port1#inn5#kln27#par120" name="userid1 (Array)_PASSING_RoleCondition12 [oid]" sourceLinkParameter="wsv1#port1#seu1#oln27#par114" target="wsv1#port1#seu11#su33#rcond20.ent1#att1"/>
+        <LinkParameter id="wsv1#port1#inn5#kln27#par121" name="userid1 (Array)_PASSING" sourceLinkParameter="wsv1#port1#seu1#oln27#par114" passing="true"/>
+        <LinkParameter id="wsv1#port1#inn5#kln27#par122" name="userid2 (Array)_PASSING" sourceLinkParameter="wsv1#port1#seu1#oln27#par115" passing="true"/>
+      </KOLink>
+      <OKLink id="wsv1#port1#inn5#oln42" name="OKLink42" to="wsv1#port1#xou1" automaticCoupling="true" gr:bendpoints="196,-117,-184,-122"/>
+    </IsNotNullUnit>
+    <SelectorUnit id="wsv1#port1#seu11" name="GetChat" gr:x="325" gr:y="65" entity="ent2">
+      <Selector id="wsv1#port1#seu11#su33" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="wsv1#port1#seu11#su33#rcond19" name="RoleCondition11" predicate="in" implied="false" role="rel10#role20"/>
+        <RelationshipRoleCondition id="wsv1#port1#seu11#su33#rcond20" name="RoleCondition12" predicate="in" implied="false" role="rel9#role18"/>
+      </Selector>
+      <KOLink id="wsv1#port1#seu11#kln26" name="KOLink13" to="wsv1#port1#eru1" automaticCoupling="true"/>
+      <OKLink id="wsv1#port1#seu11#oln40" name="OKLink40" to="wsv1#port1#inn6">
+        <LinkParameter id="wsv1#port1#seu11#oln40#par123" name="oid_Input" source="ent2#att10Array" target="wsv1#port1#inn6.isnotnull"/>
+        <LinkParameter id="wsv1#port1#seu11#oln40#par124" name="userid1 (Array)_PASSING" sourceLinkParameter="wsv1#port1#inn5#kln27#par121" passing="true"/>
+        <LinkParameter id="wsv1#port1#seu11#oln40#par125" name="userid2 (Array)_PASSING" sourceLinkParameter="wsv1#port1#inn5#kln27#par122" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="475" gr:y="15" id="wsv1#port1#inn6" name="Check2">
+      <OKLink id="wsv1#port1#inn6#oln41" name="OKLink41" to="wsv1#port1#xou1" automaticCoupling="true"/>
+      <KOLink id="wsv1#port1#inn6#kln28" name="KOLink28" to="wsv1#port1#eru1" automaticCoupling="true"/>
+    </IsNotNullUnit>
   </OperationUnits>
 </Port>
